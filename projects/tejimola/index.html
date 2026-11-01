@@ -1,4 +1,163 @@
-<!doctype html>
-  <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tejimola</title></head>
-  <body><!-- Tejimola project page: built step by step --></body></html>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tejimola — Bhash</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,400;1,500&family=Fredoka:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--fg:#fafafa;--mute:#8d8d8d;--red:#e11d2e;--pad:clamp(16px,3vw,40px)}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);overflow:hidden;font:400 15px/1.4 "Inter Tight",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.035em;line-height:1}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.05em 0 .12em}
+.i{display:inline-block;transform:translateY(112%);transition:transform .9s cubic-bezier(.2,.75,.1,1)}
+.in .i{transform:none}
+.top{position:fixed;top:0;left:0;right:0;z-index:36;display:flex;justify-content:space-between;align-items:center;padding:calc(18px + env(safe-area-inset-top,0px)) calc(var(--pad) + 112px) 0 var(--pad);color:#fff;mix-blend-mode:difference}
+.logo{font:500 28px/1 "Fredoka","Nunito","Varela Round",system-ui,sans-serif;letter-spacing:0}
+.tl{display:flex;align-items:center;gap:22px}
+.back{display:flex;align-items:center;gap:8px;font-size:15px}
+.back svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6}
+.top nav{display:flex;gap:clamp(16px,2.4vw,34px)}
+.top a:hover,.top button:hover{text-decoration:underline;text-underline-offset:4px}
+.resume{position:fixed;z-index:50;top:calc(11px + env(safe-area-inset-top,0px));right:var(--pad);background:#2a52be;color:#fff;padding:7px 16px;border-radius:30px;font-size:14px;font-weight:500;transition:background .25s,transform .25s}
+.resume:hover{background:#1f3f94;transform:translateY(-1px)}
+.toc{position:fixed;left:var(--pad);top:50%;transform:translateY(-50%);width:min(24vw,290px);z-index:25;transition:opacity .6s}
+.toc.off{opacity:0;pointer-events:none}
+.toc button{display:block;width:100%;padding:5px 0;font:500 clamp(18px,1.7vw,26px)/1.1 "Inter Tight",system-ui,sans-serif;letter-spacing:-.03em;color:var(--mute);transition:color .25s}
+.toc button.a{color:var(--fg)}
+.toc button.soon{opacity:.45;cursor:default}
+.toc p{margin:0;max-height:0;overflow:hidden;opacity:0;font:400 13px/1.35 "Inter Tight",system-ui,sans-serif;letter-spacing:0;color:var(--fg);transition:max-height .4s,opacity .3s}
+.toc button:hover p,.toc button:focus-visible p{max-height:5em;opacity:1;padding-top:6px}
+.stage{position:fixed;inset:0;overflow:hidden;background:#000;transform-origin:center}
+.slide{position:absolute;inset:0;overflow:hidden}
+.slide[hidden]{display:block;visibility:hidden}
+#s0{background:#000;z-index:2}
+#hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.fog{position:absolute;inset:-20%;pointer-events:none}
+.fog i{position:absolute;display:block;border-radius:50%;background:radial-gradient(circle,rgba(150,150,150,.20) 0,rgba(150,150,150,0) 66%);filter:blur(24px);animation:drift 22s ease-in-out infinite alternate}
+.fog i:nth-child(1){left:-6%;top:42%;width:62vmax;height:36vmax}
+.fog i:nth-child(2){left:36%;top:18%;width:56vmax;height:34vmax;animation-duration:27s;animation-delay:-8s}
+.fog i:nth-child(3){left:58%;top:56%;width:66vmax;height:38vmax;animation-duration:31s;animation-delay:-14s}
+.fog i:nth-child(4){left:10%;top:-4%;width:50vmax;height:30vmax;animation-duration:25s;animation-delay:-4s;opacity:.6}
+@keyframes drift{to{transform:translate3d(9%,-6%,0) scale(1.14)}}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 38%,rgba(0,0,0,.85) 100%)}
+.cue{position:absolute;left:50%;bottom:clamp(22px,5vh,48px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;z-index:3;color:#fff;font-size:13px;letter-spacing:.04em}
+.mouse{width:26px;height:42px;border:2px solid #fff;border-radius:14px;position:relative}
+.mouse::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:9px;margin-left:-2px;border-radius:2px;background:var(--red);animation:wheel 1.7s cubic-bezier(.5,0,.2,1) infinite}
+@keyframes wheel{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{transform:translateY(0);opacity:0}}
+#s1{background:#050505;z-index:1}
+.ttl{position:absolute;left:calc(var(--pad) + min(24vw,290px) + 4vw);right:var(--pad);bottom:clamp(36px,9vh,100px)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:clamp(14px,2.4vh,26px);opacity:0;transform:translateY(10px);transition:opacity .8s .15s,transform .8s .15s}
+.tags span{font-size:12px;padding:3px 11px;border:1px solid var(--fg);border-radius:20px}
+.ttl h1{font-size:clamp(52px,10vw,176px);margin:0 0 clamp(16px,3vh,32px)}
+.hook{margin:0;max-width:46ch;font-size:clamp(15px,1.3vw,20px);line-height:1.4;color:#d9d9d9;opacity:0;transform:translateY(12px);transition:opacity 1s .95s,transform 1s .95s}
+.go .tags,.go .hook{opacity:1;transform:none}
+.smoke{position:fixed;left:0;top:0;width:100%;height:230vh;z-index:30;pointer-events:none;transform:translateY(100vh);will-change:transform;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 22%,#000 78%,transparent 100%)}
+.smoke b{position:absolute;inset:0;background:#000}
+.smoke i{position:absolute;display:block;border-radius:50%;background:radial-gradient(circle,#000 0,#000 40%,rgba(0,0,0,0) 72%);filter:blur(22px);animation:roil 5s ease-in-out infinite alternate}
+@keyframes roil{to{transform:translate3d(7%,-4%,0) scale(1.18)}}
+@media (max-width:900px){.toc{display:none}.ttl{left:var(--pad)}}
+@media (prefers-reduced-motion:reduce){.fog i,.smoke i{animation:none}.mouse::after{animation:none}.i{transform:none;transition:none}.tags,.hook{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="tl"><a class="back" href="../../index.html" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back</a><a class="logo" href="../../index.html">Bhash</a></div>
+<nav><a href="../../index.html#works">Work</a><a href="../../index.html">About</a><a href="../../index.html#contact">Contact</a></nav></header>
+<a class="resume" href="../../resume.pdf" target="_blank" rel="noopener">Resume</a>
+<nav class="toc off" id="toc" aria-label="Contents"></nav>
+
+<main class="stage" id="stage">
+<section class="slide" id="s0" aria-label="Opening video">
+<video id="hv" muted loop playsinline autoplay preload="auto"></video>
+<div class="fog"><i></i><i></i><i></i><i></i></div>
+<div class="vig"></div>
+<div class="cue" id="cue"><span class="mouse"></span><span>Scroll</span></div>
+</section>
+<section class="slide" id="s1" aria-label="Title" hidden>
+<div class="fog" style="opacity:.55"><i></i><i></i><i></i><i></i></div>
+<div class="vig"></div>
+<div class="ttl">
+<div class="tags"><span>First-Person Narrative Horror</span><span>Unity</span><span>PC / Controller</span><span>4 Weeks</span></div>
+<h1 id="name">Tejimola</h1>
+<p class="hook">Your garden has turned monstrous. What was once buried has come alive, and now it's coming for you. Fight to reclaim your home from the horrors of a past that refuses to stay buried.</p>
+</div>
+</section>
+</main>
+<div class="smoke" id="smoke"><b></b></div>
+
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+/* put the opening video path here once you have it, e.g. "video/intro.mp4" */
+var HERO_VIDEO="";
+var hv=$("#hv");
+if(HERO_VIDEO){hv.src=HERO_VIDEO;var pr=hv.play();if(pr&&pr.catch)pr.catch(function(){})}else hv.remove();
+
+/* side contents bar: slide index each entry opens; null = section not built yet */
+var TOC=[["Overview","Title, tags and the hook.",1],["Concept","The idea and the research behind it.",null],["World","Space, story and the household.",null],["Systems","Loops, resources and risk.",null],["Enemies","Four hauntings, four senses.",null],["Levels","Level 1 in detail.",null],["Art","Palette, light and form.",null],["Endings","Deny, confess or retaliate.",null]];
+var toc=$("#toc");
+toc.innerHTML=TOC.map(function(t,k){return '<button data-k="'+k+'"'+(t[2]===null?' class="soon"':'')+'>'+t[0]+'<p>'+t[1]+(t[2]===null?' Coming soon.':'')+'</p></button>'}).join("");
+toc.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var t=TOC[+b.dataset.k];if(t[2]!==null)go(t[2])});
+
+/* split the title into words for the reveal */
+var nm=$("#name");nm.innerHTML='<span class="w"><span class="i">'+nm.textContent+'</span></span>';
+
+var slides=[$("#s0"),$("#s1")],cur=0,busy=false,smoke=$("#smoke");
+/* smoke blobs */
+var sb="";for(var q=0;q<9;q++){sb+='<i style="left:'+(q*12-10)+'%;top:'+(q%2?4:16)+'%;width:'+(34+q%3*10)+'vmax;height:'+(26+q%4*6)+'vmax;animation-delay:-'+(q*.7)+'s"></i>'}
+for(q=0;q<9;q++){sb+='<i style="left:'+(q*12-8)+'%;bottom:'+(q%2?2:14)+'%;width:'+(34+q%3*10)+'vmax;height:'+(26+q%4*6)+'vmax;animation-delay:-'+(q*.9)+'s"></i>'}
+smoke.insertAdjacentHTML("beforeend",sb);
+
+function show(i){
+slides.forEach(function(s,k){s.hidden=k!==i;s.style.zIndex=k===i?2:1});
+cur=i;
+[].forEach.call(toc.querySelectorAll("button"),function(b,k){b.classList.toggle("a",TOC[k][2]===i)});
+toc.classList.toggle("off",i===0);
+var s=slides[i];
+if(i===1){nm.classList.remove("in");s.classList.remove("go");
+requestAnimationFrame(function(){requestAnimationFrame(function(){nm.classList.add("in");s.classList.add("go")})})}
+}
+function go(i){
+if(busy||i===cur||i<0||i>=slides.length)return;
+if(rm){show(i);return}
+busy=true;
+var a=smoke.animate([{transform:"translateY(100vh)"},{transform:"translateY(-70vh)",offset:.55,easing:"cubic-bezier(.4,0,.6,1)"},{transform:"translateY(-240vh)"}],{duration:2300,easing:"cubic-bezier(.45,.05,.4,1)",fill:"none"});
+setTimeout(function(){show(i)},1050);
+a.onfinish=function(){busy=false};
+}
+
+/* one scroll = one screen */
+var acc=0,t0=0;
+addEventListener("wheel",function(e){
+e.preventDefault();
+if(busy)return;
+var now=Date.now();if(now-t0>240)acc=0;t0=now;acc+=e.deltaY;
+if(acc>40){acc=0;go(cur+1)}else if(acc<-40){acc=0;go(cur-1)}
+},{passive:false});
+addEventListener("keydown",function(e){
+if(e.key==="ArrowDown"||e.key==="PageDown"||e.key===" "){e.preventDefault();go(cur+1)}
+else if(e.key==="ArrowUp"||e.key==="PageUp"){e.preventDefault();go(cur-1)}
+});
+var ty=null;
+addEventListener("touchstart",function(e){ty=e.touches[0].clientY},{passive:true});
+addEventListener("touchend",function(e){if(ty===null)return;var d=ty-e.changedTouches[0].clientY;ty=null;if(d>50)go(cur+1);else if(d<-50)go(cur-1)},{passive:true});
+
+/* the page flips open, like a project card on the home page */
+show(0);
+if(!rm){
+var st=$("#stage");
+st.animate([{transform:"perspective(1400px) rotateY(90deg)",opacity:.2},{transform:"perspective(1400px) rotateY(0deg)",opacity:1}],{duration:1100,easing:"cubic-bezier(.65,0,.25,1)"});
+}
+})();
+</script>
+</body>
+</html>
