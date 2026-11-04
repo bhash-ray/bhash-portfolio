@@ -996,7 +996,13 @@ a.mt{text-decoration:none;cursor:pointer}
 .pimgs i em{color:#fff!important;text-shadow:0 1px 8px #000,0 0 3px #000;z-index:2}</style>
 <style>.ti{display:inline-flex;align-items:center;gap:6px;margin-right:14px;white-space:nowrap}.ti img{height:clamp(30px,5.2vh,50px);width:auto;display:block;background:none}</style>
 <style>.eimg{border:6px solid #fff!important;box-sizing:border-box;border-radius:18px!important;overflow:hidden}#sec-endings .ehead{transform:translateY(22px)}#sec-endings .endbox .ed{padding-right:6px}</style>
-<style>.lw svg,.ring svg{pointer-events:none}</style>
+<style>.lw svg,.ring svg{pointer-events:none}
+/* title slide uses the cover art */
+#s1,html.lt #s1{background:url(assets/cover.jpg) center/cover no-repeat!important}
+#s1 .fog{display:none}
+.ttl h1{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;margin:0}
+.ttl{justify-content:flex-start;padding-top:clamp(70px,13vh,130px)}
+</style>
 </head>
 <body>
 <div class="topfade" id="topfade"></div>
