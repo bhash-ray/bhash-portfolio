@@ -174,7 +174,7 @@ th{font-weight:500}
 .flip:hover>span,.flip:focus-visible>span,.flip.on>span{transform:rotateY(180deg)}
 .flip i{position:absolute;inset:0;border-radius:4px;overflow:hidden;backface-visibility:hidden;background:#111;color:#fff;font-style:normal}
 .flip i+i{transform:rotateY(180deg)}
-.flip em{position:absolute;left:14px;bottom:12px;font-size:13px;font-style:normal;z-index:2}
+.flip em{text-shadow:0 1px 6px rgba(0,0,0,.7);position:absolute;left:14px;bottom:12px;font-size:13px;font-style:normal;z-index:2}
 @media (max-width:900px){.toc{display:none}.body{grid-template-columns:1fr}.sec,.sec.wide{grid-column:1}dl{grid-template-columns:repeat(2,auto)}.tri,.two{grid-template-columns:1fr}}
 /* dice */
 #ld{position:fixed;inset:0;z-index:100;background:#0b0b0b;display:grid;place-items:center;perspective:1000px;--s:clamp(34px,4vw,48px)}
@@ -240,8 +240,7 @@ var P=[
 {n:"Kabootar Udd!",d:"A chaotic arcade game about defending your balcony from villainous pigeons with your hands, a cloth, a newspaper and a tawa. Project page coming soon.",t:["Mobile game","Arcade","Solo"],y:2026,pl:"Mobile, Web",tl:"Web",v:"",img:"",href:"",tc:"Soon",kind:"Coming soon"}];
 var N=P.length;
 var S=[["Introduction","Where the game started and who it is for."],["Play","Watch the gameplay or play the web build."],["Design","How the idea became rules, art and tone."],["Gameplay","What players do, minute to minute."],["Outcome","Where it ended up and what I learned."]];
-var AB=[["Hello","Who I am and how I got here."],["Craft","What I do in a game team."],["Experience","Where I have worked and studied."]];
-var BX=[[0,0,100,100,0],[8,14,46,60,1],[52,6,40,34,2],[58,44,34,48,3],[20,60,30,30,4],[70,70,24,22,5]];
+var AB=[["About","Who I am and where I work."],["Experience","Study, work and college roles."],["Beyond design","What I do when I am not designing."]];var BX=[[0,0,100,100,0],[8,14,46,60,1],[52,6,40,34,2],[58,44,34,48,3],[20,60,30,30,4],[70,70,24,22,5]];
 var DK=["#101010","#1d1d1d","#2b2b2b","#3a3a3a","#4a4a4a","#171717"];
 function art(k){return BX.map(function(b,j){return '<span class="bx" style="left:'+b[0]+'%;top:'+b[1]+'%;width:'+b[2]+'%;height:'+b[3]+'%;background:'+DK[(b[4]+k)%6]+'"></span>'}).join("")}
 
@@ -251,9 +250,9 @@ function rv(root){[].forEach.call(root.querySelectorAll(".rv"),split)}
 function inView(root){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add("in")})},{threshold:.3});[].forEach.call(root.querySelectorAll(".rv"),function(h){io.observe(h)})}
 
 /* footer */
-function ft(about){return '<footer class="ft" id="contact"><a class="nx" href="mailto:hello@example.com?subject=Hello%20Bhash">Contact me</a><a class="big" href="mailto:hello@example.com">hello@example.com</a>'+
-  '<div class="links"><a href="https://example.com" target="_blank" rel="noopener">LinkedIn</a><a href="https://example.com" target="_blank" rel="noopener">Instagram</a><a href="https://example.com" target="_blank" rel="noopener">Itch.io</a>'+'</div>'+
-  '<p>Open to studio roles, freelance and playful collaborations. Say hi.</p></footer>'}
+function ft(about){return '<footer class="ft" id="contact"><a class="nx" href="mailto:bhaswati_g@nid.edu?subject=Hello%20Bhaswati">Contact me</a><a class="big" href="mailto:bhaswati_g@nid.edu">bhaswati_g@nid.edu</a>'+
+  '<div class="links"><a href="https://www.linkedin.com/in/gogoirayshxeian/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bhaswati-ray.itch.io/" target="_blank" rel="noopener">Itch.io</a><a href="https://www.behance.net/shxinray" target="_blank" rel="noopener">Behance</a>'+'</div>'+
+  '<p>Open to game design and technical art roles, internships and collaborations. Say hi.</p></footer>'}
 $("#homeFt").innerHTML=ft(true);
 
 /* banner: separate depth layers (sky, far, mid, near in front of the title) — shapes only, no characters */
@@ -369,11 +368,14 @@ function build(i){var p=P[i],n=(i+1)%N;kind="proj";
   rv(proj);proj.scrollTop=0;wire()}
 function buildAbout(){kind="about";
   proj.innerHTML=toc(AB)+'<div class="body nohero">'+
-  '<section class="sec wide" id="s0"><h2 class="rv">Hello</h2><div class="two"><button class="flip" aria-label="Flip the photo"><span><i class="vid"><span class="art">'+art(2)+'</span><em>Hover to flip</em></i><i class="vid"><span class="art">'+art(4)+'</span><em>Hi, that is me at work</em></i></span></button>'+
-  '<div><p>I am Bhash, a game designer and developer. I like small, strange games with a clear feeling at the centre of them.</p><p>Replace this with your own story: where you studied, what pulled you into games, and the kind of work you want to make next.</p><dl><div><dt>Based in</dt><dd>Your city</dd></div><div><dt>Focus</dt><dd>Game design</dd></div><div><dt>Engines</dt><dd>Unity, Godot</dd></div><div><dt>Open to</dt><dd>Studio roles</dd></div></dl></div></div></section>'+
-  '<section class="sec" id="s1"><h2 class="rv">Craft</h2><p>The parts of making a game that I spend the most time on.</p><div class="tri"><div><b>Systems</b>Rules, loops and balance that make a game readable.</div><div><b>Narrative</b>Tone, pacing and small moments that stay with players.</div><div><b>Prototyping</b>Fast greyboxes and play-tests before anything is polished.</div></div></section>'+
-  '<section class="sec" id="s2"><h2 class="rv">Experience</h2><p>A short timeline. Replace the rows with your own.</p><table><tr><th>Year</th><th>What</th><th>Where</th></tr><tr><td>2026</td><td>Game designer</td><td>Studio name</td></tr><tr><td>2025</td><td>Game designer</td><td>Studio name</td></tr><tr><td>2023</td><td>Degree in design</td><td>School name</td></tr></table></section></div>'+ft(false);
+  '<section class="sec wide" id="s0"><h2 class="rv">About</h2><div class="two"><button class="flip" aria-label="Flip the photo"><span><i><img class="cimg" src="assets/images/about-photo.jpg" alt="Bhaswati Gogoi" draggable="false"><em>Hover to flip</em></i><i><video class="cimg" data-src="projects/tiffin-wiffin/assets/exhibition.mp4" muted loop playsinline preload="none"></video><em>Me at Science Gallery Bengaluru</em></i></span></button>'+
+  '<div><p>Multidisciplinary visual designer and game designer with a BFA in Applied Arts and professional experience in 2D animation, illustration and visual storytelling.</p><p>Currently pursuing Digital Game Design at NID Bengaluru, exploring the intersection of art, technology and gameplay, with a growing focus on technical art, level design and interactive experiences.</p><p>Creative, outgoing and collaborative, with strengths in team leadership, public speaking and event coordination. Work exhibited at Science Gallery Bengaluru.</p><dl><div><dt>Based in</dt><dd>Bengaluru</dd></div><div><dt>Focus</dt><dd>Game design, technical art</dd></div><div><dt>Tools</dt><dd>Unity, Blender, Photoshop</dd></div><div><dt>Languages</dt><dd>Bengali, Assamese, Hindi, English</dd></div></dl></div></div></section>'+
+  '<section class="sec" id="s1"><h2 class="rv">Experience</h2><p>Where I have studied and worked.</p><table><tr><th>When</th><th>What</th><th>Where</th></tr><tr><td>2025 to now</td><td>M.Des, Digital Game Design</td><td>NID Bengaluru</td></tr><tr><td>2021 to 2023</td><td>Media Visualizer</td><td>NIIT</td></tr><tr><td>Since COVID-19</td><td>Co-Founder and Creative Educator</td><td>Fine Arts Studio (MSME)</td></tr><tr><td>2021</td><td>BFA, Applied Arts</td><td>College of Art, University of Delhi</td></tr></table>'+
+  '<p style="margin-top:22px">At NID I have been Student Coordinator in the Placement Cell, Team Lead of the Student Merch Committee and Event Coordinator for 10 Years of Game Design, and I ran my own stall at Defrost.</p></section>'+
+  '<section class="sec" id="s2"><h2 class="rv">Beyond design</h2><p>I write poetry, sketch, play narrative games and explore art exhibitions.</p><p>I believe creativity is as much about curiosity and connecting with people as it is about making things.</p></section></div>'+ft(false);
   rv(proj);proj.scrollTop=0;wire()}
+function flipVid(f){var v=$("video",f);if(!v)return;if(!v.src&&v.dataset.src)v.src=v.dataset.src;if(f.classList.contains("on")){var q=v.play();if(q&&q.catch)q.catch(function(){})}else v.pause()}
+document.addEventListener("mouseover",function(e){var f=e.target.closest&&e.target.closest(".flip");if(f&&!f.dataset.h){f.dataset.h=1;var v=$("video",f);if(v&&!v.src)v.src=v.dataset.src;if(v){var q=v.play();if(q&&q.catch)q.catch(function(){})}}});
 function push(){try{history.pushState({p:1},"");pushed=true}catch(e){pushed=false}}
 function heroIn(){var h=$(".hero h1",proj);if(h)h.classList.add("in")}
 function show(){proj.classList.add("on");home.inert=true;document.body.classList.add("pg");push();requestAnimationFrame(heroIn)}
@@ -386,7 +388,7 @@ function closeP(cb,fromPop){var a=proj.animate([{opacity:1,transform:"none"},{op
 addEventListener("popstate",function(){if(ignorePop){ignorePop=false;return}if(isOn()){pushed=false;closeP(null,true)}});
 addEventListener("keydown",function(e){if(e.key==="Escape"&&isOn())goBack()});
 proj.addEventListener("click",function(e){
-  var f=e.target.closest(".flip");if(f){f.classList.toggle("on");return}
+  var f=e.target.closest(".flip");if(f){f.classList.toggle("on");flipVid(f);return}
   var b=e.target.closest("button");if(!b)return;
   if(b.dataset.m){mediaClick(b);return}
   if(b.dataset.k){var s=$("#s"+b.dataset.k,proj);proj.scrollTo({top:s.getBoundingClientRect().top+proj.scrollTop-20,behavior:beh})}
