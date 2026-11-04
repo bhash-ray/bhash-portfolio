@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tejimola — Bhash</title>
+<title>Tejimola | Bhash</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;1,400;1,500&family=Fredoka:wght@500&display=swap" rel="stylesheet">
@@ -289,12 +289,12 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 .al.tex{clip-path:inset(0 100% 0 0);transition:clip-path 1.3s cubic-bezier(.65,0,.25,1)}
 .aset.s1 .al.tex,.aset.s2 .al.tex{clip-path:inset(0 0 0 0)}
 .aset[data-a="0"] .al.tex{background:linear-gradient(160deg,#27402a,#0e1a10)}
-.aset[data-a="1"] .al.tex{background:linear-gradient(160deg,#4a3526,#18110c)}
+.aset[data-a="1"] .al.tex{background:linear-gradient(160deg,#33182a,#0f0911)}
 .aset[data-a="2"] .al.tex{background:linear-gradient(160deg,#233d3b,#0b1716)}
 .al.game{opacity:0;transition:opacity 1.2s;background-size:240% 240%;animation:agm 6s ease-in-out infinite alternate}
 .aset.s2 .al.game{opacity:1}
 .aset[data-a="0"] .al.game{background-image:linear-gradient(120deg,#355a38,#162a19,#4b7a4a)}
-.aset[data-a="1"] .al.game{background-image:linear-gradient(120deg,#5f4430,#241810,#8a6240)}
+.aset[data-a="1"] .al.game{background-image:linear-gradient(120deg,#3a1a24,#120b10,#5a2a3a)}
 .aset[data-a="2"] .al.game{background-image:linear-gradient(120deg,#2f5552,#10201f,#4a807a)}
 @keyframes agm{from{background-position:0% 40%}to{background-position:100% 60%}}
 .agrad{position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(to top,rgba(0,0,0,.88),rgba(0,0,0,0));pointer-events:none;transition:opacity .8s}
@@ -563,6 +563,113 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 @media (max-width:700px){dl{grid-template-columns:repeat(2,auto)}.tri{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.fog i,.smoke i{animation:none}.mouse::after{animation:none}.i{transform:none;transition:none}.tags,.hook{opacity:1;transform:none;transition:none}}
 </style>
+<style>.pn video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}.pn>span,.pn>b{position:relative;z-index:1;text-shadow:0 2px 12px rgba(0,0,0,.7)}.imgs i video,.imgs i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}.imgs i em{z-index:1;text-shadow:0 1px 8px rgba(0,0,0,.8);color:#d8d8d8}.rbox video,.rbox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}.rbox{position:relative;overflow:hidden}.rbox.has b{position:relative;z-index:1;text-shadow:0 2px 12px rgba(0,0,0,.8)}</style><style>
+#sec-play{min-height:calc(100vh - 90px);display:flex;flex-direction:column;justify-content:center}
+#sec-play .vid{width:min(100%,calc((100vh - 260px)*16/9));margin:0 auto}
+.sec .big{color:var(--red)}
+#hbg{background:url("images/home-screen-bg.jpg") center/cover no-repeat!important;filter:blur(6px) brightness(.7)!important}
+.loops{--S:min(58vh,48vw,600px)!important}
+@media (max-width:900px){.loops{--S:min(40vh,72vw,430px)!important}}
+.lm{position:relative}.lm video.lv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}.lm video.lv.on{opacity:1}
+#ustack .rbox{aspect-ratio:16/8!important}
+#hsnd{position:absolute;right:clamp(16px,3vw,40px);bottom:clamp(18px,4vh,40px);z-index:6;padding:8px 16px;border-radius:40px;border:1px solid rgba(255,255,255,.55);background:rgba(0,0,0,.35);color:#fff;font:500 13px "Inter Tight",system-ui,sans-serif;cursor:pointer}
+.ttl .wrap{position:relative}
+.tglt{position:absolute;left:50%;top:50%;width:min(86vw,880px);max-width:none;transform:translate(-50%,-18%);opacity:0;pointer-events:none;z-index:2}
+.wrap.tg-on .tglt{animation:tgin .55s steps(1,end) both}
+.wrap.tg-on #name{opacity:0}.wrap.tg-on:not(.tg-swap) .tags{opacity:0!important;transition:none!important}.wrap.tg-on.tg-swap .tags{opacity:1!important;transition:opacity .3s .1s!important}
+.wrap.tg-on.tg-swap .tglt{animation:tgout .35s steps(1,end) both}
+.wrap.tg-on.tg-swap #name{opacity:1;animation:tgtxt .4s steps(1,end) both}
+@keyframes tgin{0%{opacity:0}8%{opacity:1;transform:translate(-50%,-18%) translateX(-14px);clip-path:inset(20% 0 55% 0);filter:drop-shadow(6px 0 0 rgba(0,255,255,.55)) drop-shadow(-6px 0 0 rgba(255,0,60,.6))}14%{transform:translate(-50%,-18%) translateX(10px);clip-path:inset(60% 0 8% 0)}20%{transform:translate(-50%,-18%);clip-path:none;filter:none}55%{filter:none}58%{transform:translate(-50%,-18%) translateX(8px);clip-path:inset(40% 0 30% 0);filter:drop-shadow(-5px 0 0 rgba(255,0,60,.6))}62%,100%{transform:translate(-50%,-18%);clip-path:none;filter:none;opacity:1}}
+@keyframes tgout{0%{opacity:1;transform:translate(-50%,-18%) translateX(-18px);clip-path:inset(10% 0 60% 0);filter:drop-shadow(7px 0 0 rgba(0,255,255,.6)) drop-shadow(-7px 0 0 rgba(255,0,60,.6))}25%{transform:translate(-50%,-18%) translateX(14px);clip-path:inset(55% 0 12% 0)}50%{opacity:1;transform:translate(-50%,-18%) translateX(-6px);clip-path:inset(25% 0 40% 0)}75%{opacity:.5}100%{opacity:0;clip-path:inset(0 0 100% 0)}}
+@keyframes tgtxt{0%{transform:translateX(16px);clip-path:inset(30% 0 40% 0);text-shadow:5px 0 rgba(0,255,255,.55),-5px 0 rgba(255,0,60,.6)}30%{transform:translateX(-12px);clip-path:inset(60% 0 5% 0)}60%{transform:translateX(5px);clip-path:inset(10% 0 55% 0)}100%{transform:none;clip-path:none;text-shadow:none}}
+</style><style>
+.sec h3{font-size:clamp(20px,1.7vw,26px)!important;font-weight:500!important;color:var(--fg)!important;margin:56px 0 12px!important;letter-spacing:-.01em!important}
+.sec p.big{font-size:clamp(16px,1.25vw,19px)!important;line-height:1.55!important;color:#c4687f!important;max-width:60ch!important}
+.sec .big{color:#c4687f}
+#page{scroll-snap-type:y proximity}
+#sec-play{scroll-snap-align:start;min-height:100vh!important;padding-top:0!important;justify-content:center}
+#sec-concept,#sec-specs{scroll-snap-align:start}
+.loops{--S:min(44vh,40vw,460px)!important}
+@media (max-width:900px){.loops{--S:min(40vh,72vw,430px)!important}}
+.lbig{width:calc(var(--S)*.76)!important}
+#sF .pn video{opacity:0;transition:opacity .6s}#sF.on .pn video{opacity:1}
+#sF .pn:nth-child(2) video{object-position:62% 50%;transform:scale(1.5);transform-origin:62% 58%}
+.al.wire::after{display:none!important}
+.aset::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.36);z-index:2;pointer-events:none}
+.aset .agrad,.aset .acap{z-index:3}
+.endbg{background:url("images/home-screen-bg.jpg") center/cover no-repeat!important;animation:none!important}
+.endbg::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5)}.endbg em{display:none}
+.toc::before{content:"";position:fixed;left:0;top:0;bottom:0;width:calc(13vw + 90px);background:linear-gradient(90deg,rgba(0,0,0,.85) 0,rgba(0,0,0,.6) 55%,rgba(0,0,0,0));z-index:-1;pointer-events:none}
+</style><style>#sec-endings,#sec-endings .endbox{text-align:center}#sec-endings .endbox b{display:block;color:var(--red);margin-bottom:8px}#sec-endings .endrow{justify-content:center}</style><style>
+#sL .rcard .rlab{display:block;font-size:clamp(20px,1.8vw,28px);font-weight:500;margin:16px 4px 2px;color:var(--fg);text-align:left}
+#sL .rcard p{font-size:clamp(16px,1.3vw,20px)!important;line-height:1.5!important;margin-top:6px!important}
+#sL .rstack{height:calc(34vh + 210px)!important}
+.rrint{font-size:clamp(17px,1.45vw,22px)!important;margin:clamp(30px,5.5vh,56px) auto 0!important;max-width:62ch!important}
+.lbig{gap:0!important}
+.lbig .lcap{display:none!important}
+</style><style>
+#page{scroll-snap-type:y mandatory!important}
+#sec-play{scroll-snap-align:start!important;scroll-snap-stop:always;justify-content:flex-start!important;padding-top:clamp(96px,13vh,140px)!important;min-height:100vh!important}
+#sec-play::before{content:"";display:block;position:absolute;left:0;right:0;top:0;height:1px;background:#1d1d1d}
+#sec-play{position:relative}
+.ld{top:calc(var(--S) + 100px)!important}
+.scr h3,.stxt h3,.ftxt h3,#sU .ucopy h3{font-size:clamp(18px,1.55vw,24px)!important;font-weight:500!important;color:var(--fg)!important;letter-spacing:-.01em}
+</style><style>
+.atitle{align-items:flex-start!important;text-align:left!important;padding:0 calc(50% - 31ch)!important}
+.atitle h2{text-align:left}
+.atitle p{text-align:left!important;max-width:62ch}
+@media (min-width:901px){#sU .rstack{width:min(46vw,680px)!important;height:min(40vh,400px)!important}}
+</style><style>
+.tags{transition:opacity .4s .25s,transform .4s .25s}
+.hook{transition:opacity .5s .25s,transform .5s .25s}
+.mt{cursor:pointer}
+#ftxt h3,.ftxt h3{display:inline-block;color:var(--red)!important;background:rgba(0,0,0,.42);padding:4px 12px;border-radius:6px;margin-bottom:8px!important}
+</style><style>.lm img.lv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;opacity:0;transition:opacity .45s ease}.lm img.lv.on{opacity:1}</style><style>
+/* headline > accent subheadline > body */
+.sec h3,.scr h3,.stxt h3,.ftxt h3,.lvm h3,.cbody h3,.ucopy h3,#sU .ucopy h3{font-size:clamp(18px,1.55vw,24px)!important;font-weight:500!important;color:var(--red)!important;letter-spacing:-.01em!important}
+.stxt p,.ftxt p,.lvm p,.sec>p,.ucopy p,.sec p.big{font-size:clamp(15px,1.28vw,18.5px)!important;line-height:1.55!important}
+/* enemy design: one low-opacity box behind the whole text */
+#ftxt h3,.ftxt h3{display:block!important;background:none!important;padding:0!important;border-radius:0!important}
+#ftxt{background:rgba(0,0,0,.45);border-radius:16px;padding:22px 26px!important;backdrop-filter:blur(2px)}
+/* house: compact rounded modular grid */
+.mgrid{position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);width:min(88vw,calc(60vh*1.7));display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1vw,14px)}
+.mgrid i{display:block;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#111}
+.mgrid i img{position:static!important;width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:900px){.mgrid{grid-template-columns:repeat(3,1fr);width:92vw}}
+/* ending: clean footer + next-project card */
+#sec-endings{--fh:max(27vh,190px)}
+#sec-endings .cft{position:absolute!important;left:0;right:0;bottom:0;height:var(--fh)!important;min-height:0!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:9px!important;padding:0 var(--pad)!important;grid-template-columns:none!important}
+#sec-endings .cft .cl{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+#sec-endings a.cmail{display:block;color:inherit;text-decoration:none;font-size:clamp(24px,3vw,46px)!important;margin:0!important;letter-spacing:-.04em;line-height:1}
+#sec-endings a.cmail:hover{color:var(--red)}
+#sec-endings .clinks{display:flex!important;flex-direction:row!important;gap:22px!important;margin:0!important}
+#sec-endings .clinks a{font-size:clamp(15px,1.3vw,21px)!important;border:0!important}
+#sec-endings .clinks a:hover{color:var(--red)}
+#sec-endings .cft p{max-width:none!important;margin:0!important;font-size:13px!important}
+.nxt{position:absolute;right:var(--pad);bottom:calc(var(--fh)/2 - min(20vw,280px)*.28);z-index:5;display:block;width:min(20vw,280px);height:calc(min(20vw,280px)*.5625);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .35s}
+.nxt:hover{transform:translateY(-4px) scale(1.02)}
+.nxt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nxt::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),rgba(0,0,0,0) 62%)}
+.nxt .nl{position:absolute;left:14px;bottom:10px;z-index:2;display:flex;flex-direction:column;gap:2px}
+.nxt small{font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.nxt b{font-size:clamp(17px,1.6vw,24px);font-weight:500;letter-spacing:-.02em}
+@media (max-width:900px){.nxt{position:relative;right:auto;bottom:auto;width:calc(100% - 2*var(--pad));height:auto;aspect-ratio:16/9;margin:18px var(--pad)}#sec-endings .cft{position:relative!important;height:auto!important;padding:24px var(--pad)!important}}
+</style><style>.offscr,.offscr *,.offscr *::before,.offscr *::after{animation-play-state:paused!important}</style>
+<style>
+@media (min-width:901px){
+.nxt{position:absolute!important;right:0!important;bottom:0!important;top:auto!important;height:var(--fh)!important;width:calc(var(--fh)*1.7778)!important;border-radius:0!important;box-shadow:none!important;z-index:6}
+.nxt:hover{transform:none!important}
+.nxt .nl{left:18px;bottom:16px}
+#sec-endings .cft{padding-right:calc(var(--fh)*1.7778 + var(--pad))!important}
+}
+#sec-endings a.cpill{background:var(--red)!important;border:0!important;color:#fff!important;font-weight:500;padding:10px 22px!important;font-size:clamp(15px,1.2vw,18px)!important}
+#sec-endings a.cpill:hover{filter:brightness(1.12)}
+#sec-endings .clinks{gap:20px!important;column-gap:20px!important}
+#sec-endings .clinks a{color:var(--red)!important;letter-spacing:0!important;word-spacing:0!important;margin:0!important;padding:0!important}
+#sec-endings .clinks a:hover{text-decoration:underline;color:var(--red)!important}
+#sec-endings .cft p{font-size:clamp(16px,1.4vw,22px)!important;line-height:1.45!important;color:#e8e8e8!important}
+</style>
+<style>#sR .imgs i em{position:relative;z-index:2;color:#fff;text-shadow:0 1px 8px #000,0 0 3px #000}.imgs i em{z-index:2}</style>
 </head>
 <body>
 <div class="topfade" id="topfade"></div>
@@ -574,7 +681,7 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 
 <main class="stage" id="stage">
 <section class="slide" id="s0" aria-label="Opening video">
-<video id="hv" muted loop playsinline autoplay preload="auto"></video>
+<video id="hv" muted loop playsinline autoplay preload="auto"></video><button id="hsnd" type="button" aria-label="Toggle sound">Sound off</button>
 <div class="fog"><i></i><i></i><i></i><i></i></div>
 <div class="vig"></div>
 </section>
@@ -582,7 +689,7 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 <div class="fog" style="opacity:.55"><i></i><i></i><i></i><i></i></div>
 <div class="vig"></div>
 <div class="ttl">
-<div class="wrap" id="wrap"><h1 id="name">Tejimola</h1>
+<div class="wrap" id="wrap"><img class="tglt" src="images/home-screen-title.png" alt=""><h1 id="name">Tejimola</h1>
 <div class="tags"><span>First-Person Narrative Horror</span><span>Unity</span><span>PC</span><span>4 Weeks</span></div></div>
 </div>
 </section>
@@ -610,7 +717,7 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 <p class="rv">The story follows a fixed sequence of levels but reveals its past through fragmented memories. Each haunting surfaces another piece of the truth. Rather than receiving a chronological account, the player reconstructs the crime out of sequence while trying to survive.</p></section>
 <section class="sec wide" id="sec-play"><h2 class="rv">Play</h2>
 <div class="media rv"><div class="mbar"><span class="mt on">Gameplay</span><span class="mt">Trailer</span><span class="sp"></span><span class="mt play">&#9654; Play the game</span></div>
-<div class="vid">Gameplay video coming soon</div></div></section>
+<div class="vid"><video id="pv" src="video/gameplay-level-1.mp4" controls playsinline loop preload="auto" style="width:100%;height:100%;object-fit:cover;border-radius:inherit"></video></div></div></section>
 
 </div></div>
 <div class="loops" id="loops"><div class="lw">
@@ -622,15 +729,15 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 <section class="sec" id="sec-endings"><div class="endv rv" id="endv"><div class="endbg"><em>Looping gameplay video coming soon</em></div>
 <div class="endrow"><div class="endbox"><b>Deny</b>The protagonist continues lying and concealing the truth. Her sanity deteriorates until she loses herself to the haunting.</div><div class="endbox"><b>Confess</b>She admits to the murder, but her husband kills her. She returns as a vengeful spirit.</div><div class="endbox"><b>Retaliate</b>She sets out to kill her husband, whom she sees as the root of her suffering, while carrying the guilt of having murdered an innocent child.</div></div></div>
 <div class="ehead"><div class="ehi"><h2>Endings</h2><p>The final choice leads to one of three outcomes.</p></div></div>
-<a class="nname" id="sec-next" href="../tiffin-wiffin/index.html"><b>Tiffin Wiffin</b><small>Next project</small></a>
-<footer class="cft" id="sec-contact"><div class="cl"><a class="cpill" href="../../index.html#contact">Contact me</a><div class="cmail">hello@example.com</div></div><div class="clinks"><a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">Itch.io</a></div><p>Open to studio roles, freelance and playful collaborations. Say hi.</p></footer></section>
+<a class="nxt" id="sec-next" href="../tiffin-wiffin/index.html"><img src="images/next-tiffin3.jpg" alt="Tiffin Wiffin"><span class="nl"><small>Next project</small><b>Tiffin Wiffin</b></span></a>
+<footer class="cft" id="sec-contact"><div class="cl"><a class="cpill" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">Contact me</a><a class="cmail" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">bhaswati_g@nid.edu</a></div><div class="clinks"><a href="https://www.linkedin.com/in/gogoirayshxeian/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bhaswati-ray.itch.io/" target="_blank" rel="noopener">Itch.io</a></div><p>Open to studio roles, freelance and playful collaborations. Say hi.</p></footer></section>
 </div></div>
 <div class="story" id="story"><div class="blob" id="blob"></div>
 <section class="scr" id="sR"><div class="sgrid">
-<div class="imgs"><i style="--d:.35s"><em>Courtyard</em></i><i style="--d:.5s"><em>Tube well</em></i><i style="--d:.65s"><em>Rice mill</em></i><i style="--d:.8s"><em>Tool house &amp; arival</em></i></div>
+<div class="imgs"><i style="--d:.35s"><img src="images/res-courtyard.jpg" alt=""><em>Courtyard</em></i><i style="--d:.5s"><img src="images/res-tubewell.jpg" alt=""><em>Tube well</em></i><i style="--d:.65s"><img src="images/res-ricemill.jpg" alt=""><em>Rice mill</em></i><i style="--d:.8s"><img src="images/res-toolhouse.jpg" alt=""><em>Tool house &amp; arival</em></i></div>
 <div class="stxt"><h2>Research</h2>
 <h3>Folklore as a Gameplay Structure</h3>
-<p>The folktale&rsquo;s recurring pattern of transformation and return &mdash; gourd, tree, bird and water &mdash; informed the game&rsquo;s four-encounter structure. Each element becomes a distinct supernatural threat and a progression point in the narrative.</p>
+<p>The folktale&rsquo;s recurring pattern of transformation and return, gourd, tree, bird and water, informed the game&rsquo;s four-encounter structure. Each element becomes a distinct supernatural threat and a progression point in the narrative.</p>
 <h3>Assamese Household Research</h3>
 <p>Research into traditional Assamese domestic spaces and tools informed the environment and prop design. Key references included the courtyard, tube well, rice mill, tool house and <i>arival</i>.</p></div></div></section>
 <section class="scr" id="sW"><div class="sgrid">
@@ -638,21 +745,21 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 <h3>Setting</h3>
 <p>A wealthy rural Assamese household in the mid-1990s, surrounded by a courtyard, garden, backyard and river. The home has no electricity.</p>
 <p>The player inhabits a woman haunted by the aftermath of Tejimola&rsquo;s murder. As the haunting intensifies, suppressed memories and guilt begin to resurface. The final reveal identifies her as Tejimola&rsquo;s stepmother, and the story culminates in a choice: <b>confess to the murder or continue concealing the truth.</b></p></div>
-<div class="imgs three"><i style="--d:.35s"><em>Courtyard &amp; garden</em></i><i style="--d:.5s"><em>House interior</em></i><i style="--d:.65s"><em>The river</em></i></div></div></section>
+<div class="imgs three"><i style="--d:.35s"><video src="video/house-teji.mp4" autoplay muted loop playsinline></video><em>Courtyard &amp; garden</em></i><i style="--d:.5s"><img src="images/modular-panels.jpg" alt=""><em>House interior</em></i><i style="--d:.65s"><video src="video/death.mp4" autoplay muted loop playsinline></video><em>The river</em></i></div></div></section>
 <section class="scr" id="sL"><div class="lvc">
 <h2 class="lvh"><span class="lslot"><span class="lsw"><span>Level Design</span><span>Resource &amp; Risk Economy</span></span></span></h2>
 <p class="lvsub">Level 1 is complete and playable; Levels 2&ndash;4 are in production.</p>
 <div class="rr"><p class="rrint">Tejimola has no currency-based economy. Instead, the player manages vulnerability through health, tools, sanity and evidence.</p>
 <div class="rstack" id="rstack">
-<div class="rcard" data-o="0"><div class="rbox"><b>Health</b></div><p>Five vine hits cause failure. The player restarts from the last checkpoint; failure costs time, not accumulated progress.</p></div>
-<div class="rcard" data-o="1"><div class="rbox"><b>Tools</b></div><p>Weapons dropped in grass can be difficult to recover. A UI marker helps locate them, keeping tool loss consequential without making it unfair.</p></div>
-<div class="rcard" data-o="2"><div class="rbox"><b>Sanity</b></div><p>Lying drains sanity, making dishonesty a cost to the player.</p></div></div>
+<div class="rcard" data-o="0"><div class="rbox has"><video src="video/death-ui.mp4" autoplay muted loop playsinline></video></div><b class="rlab">Health</b><p>Five vine hits cause failure. The player restarts from the last checkpoint; failure costs time, not accumulated progress.</p></div>
+<div class="rcard" data-o="1"><div class="rbox has"><video src="video/hand-ui.mp4" autoplay muted loop playsinline></video></div><b class="rlab">Tools</b><p>Weapons dropped in grass can be difficult to recover. A UI marker helps locate them, keeping tool loss consequential without making it unfair.</p></div>
+<div class="rcard" data-o="2"><div class="rbox"></div><b class="rlab">Sanity</b><p>Lying drains sanity, making dishonesty a cost to the player.</p></div></div>
 </div></div></section>
 <section class="scr" id="sF"><div class="film" id="film">
-<div class="pn"><span>Level 1</span><b>Bottle Gourd</b><em>image / video coming soon</em></div>
-<div class="pn"><span>Level 2</span><b>Citrus Tree</b><em>image / video coming soon</em></div>
-<div class="pn"><span>Level 3</span><b>Crows</b><em>image / video coming soon</em></div>
-<div class="pn"><span>Level 4</span><b>Water Lily</b><em>image / video coming soon</em></div></div>
+<div class="pn"><span>Level 1</span><b>Bottle Gourd</b><video src="video/vines.mp4" autoplay muted loop playsinline></video></div>
+<div class="pn"><span>Level 2</span><b>Citrus Tree</b><video src="video/tree.mp4" autoplay muted loop playsinline></video></div>
+<div class="pn"><span>Level 3</span><b>Crows</b><video src="video/crows.mp4" autoplay muted loop playsinline></video></div>
+<div class="pn"><span>Level 4</span><b>Water Lily</b><video src="video/death.mp4" autoplay muted loop playsinline></video></div></div>
 <div class="fintro"><h2>Enemy &amp; Encounter Design</h2><p>Each haunting targets a different sense and demands a different response, preventing the encounters from feeling like repeated versions of the same fight.</p></div>
 <div class="ftxt" id="ftxt">
 <div class="e"><span>Level 1</span><h2>Bottle Gourd</h2><h3>Behaviour</h3><p>Aggressive vines emerge and spread. A hit paralyses the player.</p><h3>Player Response</h3><p>Escape, find the sickle, return and destroy the source.</p><h3>Design Purpose</h3><p>Introduces pursuit, escalation and tool use.</p></div>
@@ -660,7 +767,7 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 <div class="e"><span>Level 3</span><h2>Crows</h2><h3>Behaviour</h3><p>Aerial harassment through dive-bombs, talons and aggressive cawing.</p><h3>Player Response</h3><p>Use light, cover and movement to evade attacks.</p><h3>Design Purpose</h3><p>Makes sound a central threat.</p></div>
 <div class="e"><span>Level 4</span><h2>Water Lily</h2><h3>Behaviour</h3><p>Lily vines and rising water threaten to drown the player.</p><h3>Player Response</h3><p>Escape the vines and manage the clock.</p><h3>Design Purpose</h3><p>Introduces a time-based survival challenge.</p></div></div></section>
 <section class="scr" id="sB"><div class="bwrap"><div class="bcol"><div class="bhead"><h2 class="bt">Beat Chart</h2><h2 class="bgt">Pacing &amp; Experience Graph</h2></div><div class="bbody" id="bbody"><div class="btable"><div class="brow bhd"><span>Beat</span><span>Form / Threat</span><span>Mechanic</span><span>How it&rsquo;s overcome</span><span>Flashback reveal</span></div><div class="brow"><span class="bn">Level 1</span><div class="bth"><i class="bimg"></i><b>Bottle Gourd</b><small>Paralysis Vines</small></div><p class="bm" data-l="Mechanic">Aggressive vines emerge and spread. A hit paralyses the player.</p><p class="bo" data-l="Overcome">Escape, find the sickle, return and destroy the source.</p><p class="bf" data-l="Flashback">She recalls scolding Tejimola over torn vines; the father steps in.</p></div><div class="brow"><span class="bn">Level 2</span><div class="bth"><i class="bimg"></i><b>Citrus Tree</b><small>Poison Grove</small></div><p class="bm" data-l="Mechanic">Slamming attacks and recurring poisonous fog that clouds vision.</p><p class="bo" data-l="Overcome">Read the poison cycle, approach during its lowest point and cut down the tree.</p><p class="bf" data-l="Flashback">The fall from the tree and the father&rsquo;s rebuke for the stepmother&rsquo;s neglect.</p></div><div class="brow"><span class="bn">Level 3</span><div class="bth"><i class="bimg"></i><b>Crows</b><small>Aerial Harassment</small></div><p class="bm" data-l="Mechanic">Dive-bombs, talons and aggressive cawing from above.</p><p class="bo" data-l="Overcome">Use light, cover and movement to evade attacks.</p><p class="bf" data-l="Flashback">Tejimola feeding the birds, causing trouble for the stepmother and angering her.</p></div><div class="brow"><span class="bn">Level 4</span><div class="bth"><i class="bimg"></i><b>Water Lily</b><small>The Drowning</small></div><p class="bm" data-l="Mechanic">Lily vines and rising water threaten to drown the player.</p><p class="bo" data-l="Overcome">Escape the vines and manage the clock.</p><p class="bf" data-l="Flashback">The father&rsquo;s homecoming ritual: bringing Tejimola lilies from the river, greeting only Tejimola, never the stepmother.</p></div></div><div class="bchart" id="bchart"></div><div class="bdots" id="bdots"></div></div></div></div></section>
-<section class="scr" id="sU"><div class="sgrid"><div class="stxt"><h2>UI Design</h2><p>The interface stays minimal to preserve immersion, appearing only when needed. Environmental cues, sound and visual changes carry the experience.</p><div class="ucopy" id="ucopy"><h3>Interaction</h3><p>A dot or hand prompt indicates interactable objects.</p></div></div><div class="rstack" id="ustack"><div class="rcard" data-o="0"><div class="rbox"><b>Interaction</b></div></div><div class="rcard" data-o="1"><div class="rbox"><b>Tasks</b></div></div><div class="rcard" data-o="2"><div class="rbox"><b>Damage</b></div></div><div class="rcard" data-o="3"><div class="rbox"><b>Death</b></div></div></div></div></section><section class="scr" id="sA"><div class="aset" data-a="0"><div class="alyr"><div class="al wire"></div><div class="al tex"></div><div class="al game"></div></div><div class="agrad"></div><div class="acap"><span class="ast">Wireframe</span><b>Bottle Gourd</b></div></div><div class="aset" data-a="1"><div class="alyr"><div class="al wire"></div><div class="al tex"></div><div class="al game"></div></div><div class="agrad"></div><div class="acap"><span class="ast">Wireframe</span><b>House</b></div></div><div class="aset" data-a="2"><div class="alyr"><div class="al wire"></div><div class="al tex"></div><div class="al game"></div></div><div class="agrad"></div><div class="acap"><span class="ast">Wireframe</span><b>Tree</b></div></div><div class="atitle"><h2>Art Direction</h2><p>Low-poly, stylised 3D environments and assets built from simple, readable forms. Heavy fog and a desaturated grey palette drain the world of colour and visibility, while warm lantern light becomes the only visual comfort and doubles as a navigation cue, making the spaces beyond its reach feel more threatening. Red is reserved for key accents &mdash; blood, hostile vines and UI strikes &mdash; so danger is recognisable at a glance. Assamese household research informed the domestic spaces, architecture and everyday objects, grounding the supernatural setting in a recognisable cultural context.</p><small>My contributions: house interior art, 3D animation, cutscenes and UI design.</small></div></section></div>
+<section class="scr" id="sU"><div class="sgrid"><div class="stxt"><h2>UI Design</h2><p>The interface stays minimal to preserve immersion, appearing only when needed. Environmental cues, sound and visual changes carry the experience.</p><div class="ucopy" id="ucopy"><h3>Interaction</h3><p>A dot or hand prompt indicates interactable objects.</p></div></div><div class="rstack" id="ustack"><div class="rcard" data-o="0"><div class="rbox"><b>Interaction</b></div></div><div class="rcard" data-o="1"><div class="rbox"><b>Tasks</b></div></div><div class="rcard" data-o="2"><div class="rbox"><b>Damage</b></div></div><div class="rcard" data-o="3"><div class="rbox"><b>Death</b></div></div></div></div></section><section class="scr" id="sA"><div class="aset" data-a="0"><div class="alyr"><div class="al wire"></div><div class="al tex"></div><div class="al game"></div></div><div class="agrad"></div><div class="acap"><span class="ast">Wireframe</span><b>Bottle Gourd</b></div></div><div class="aset" data-a="1"><div class="alyr"><div class="al wire"></div><div class="al tex"></div><div class="al game"></div></div><div class="agrad"></div><div class="acap"><span class="ast">Wireframe</span><b>House</b></div></div><div class="aset" data-a="2"><div class="alyr"><div class="al wire"></div><div class="al tex"></div><div class="al game"></div></div><div class="agrad"></div><div class="acap"><span class="ast">Wireframe</span><b>Tree</b></div></div><div class="atitle"><h2>Art Direction</h2><p>Low-poly, stylised 3D environments and assets built from simple, readable forms. Heavy fog and a desaturated grey palette drain the world of colour and visibility, while warm lantern light becomes the only visual comfort and doubles as a navigation cue, making the spaces beyond its reach feel more threatening. Red is reserved for key accents (blood, hostile vines and UI strikes) so danger is recognisable at a glance. Assamese household research informed the domestic spaces, architecture and everyday objects, grounding the supernatural setting in a recognisable cultural context.</p></div></section></div>
 <div class="smoke" id="smoke"><b></b></div>
 
 <div class="cue2" id="cue2"><span class="mouse"></span><span>Scroll</span></div>
@@ -670,7 +777,7 @@ var $=function(s){return document.querySelector(s)};
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 
 /* put the opening video path here once you have it, e.g. "video/intro.mp4" */
-var HERO_VIDEO="";
+var HERO_VIDEO="video/trailer.mp4";
 var hv=$("#hv");
 if(HERO_VIDEO){hv.src=HERO_VIDEO;var pr=hv.play();if(pr&&pr.catch)pr.catch(function(){})}else hv.remove();
 
@@ -796,18 +903,20 @@ var ac=$("#ac"),am=$("#am");ac.style.opacity=1-t;am.style.opacity=t;
 [].forEach.call(am.children,function(el,i){el.setAttribute("d",arcD(ang[MI[i]],ang[MI[(i+1)%5]],19))})}
 function morph(to){cancelAnimationFrame(raf);if(rm){lt=to;layout(to);return}var f=lt,t0=performance.now(),dur=800*Math.abs(to-f)+1;
 (function fr(now){var u=Math.min(1,(now-t0)/dur),e=u<.5?2*u*u:1-Math.pow(-2*u+2,2)/2;lt=f+(to-f)*e;layout(lt);if(u<1)raf=requestAnimationFrame(fr)})(t0)}
-var LOOP_MEDIA=["","","","","",""];
+var LOOP_MEDIA=["video/loop-household.mp4","video/explore.mp4","video/loop-disturbance.mp4","video/death.mp4","video/loop-destroy.mp4","video/death.mp4"],LOOP_MEDIA_M=["","video/explore.mp4","images/memories.jpg","video/death.mp4","video/loop-destroy.mp4","video/house-teji.mp4"];
+var LV={};function loopShow(u){var h=document.getElementById("lm");if(!u){h.innerHTML="";LV={};return}var cur=h.querySelector(".lv.on");if(cur&&cur.getAttribute("src")===u)return;if(!LV[u]){var v;if(/\.(mp4|webm)$/i.test(u)){v=document.createElement("video");v.muted=v.loop=v.playsInline=true;v.preload="auto"}else{v=document.createElement("img");v.alt=""}v.src=u;v.className="lv";h.appendChild(v);LV[u]=v}var n=LV[u];if(n.tagName==="VIDEO"){try{n.currentTime=0}catch(e){}var pr=n.play();if(pr&&pr.catch)pr.catch(function(){})}n.classList.add("on");[].forEach.call(h.querySelectorAll(".lv.on"),function(o){if(o!==n){o.classList.remove("on");if(o.pause)setTimeout(function(){if(!o.classList.contains("on"))o.pause()},500)}})}
 function loopMedia(src){if(!src)return "";return /\.(mp4|webm)$/i.test(src)?'<video src="'+src+'" autoplay muted loop playsinline></video>':'<img src="'+src+'" alt="">'}
 function paint(n){var m=n>=4,k=m?n-4:n;
 var ai=-1;NODES.forEach(function(nd,i){var st=m?nd.ms:nd.cs;if(st>=0&&st===k)ai=i});
-if(ai>=0){var lb=document.getElementById("lbig");document.getElementById("lm").innerHTML=loopMedia(LOOP_MEDIA[ai]);document.getElementById("lcap").textContent=m?(NODES[ai].m||NODES[ai].c):NODES[ai].c;lb.classList.remove("pop");void lb.offsetWidth;lb.classList.add("pop")}
+if(ai>=0){var lb=document.getElementById("lbig");loopShow((m&&LOOP_MEDIA_M[ai])||LOOP_MEDIA[ai]);document.getElementById("lcap").textContent=m?(NODES[ai].m||NODES[ai].c):NODES[ai].c;lb.classList.remove("pop");void lb.offsetWidth;lb.classList.add("pop")}
 NODES.forEach(function(nd,i){var s=m?nd.ms:nd.cs,e=document.getElementById("n"+i);e.classList.toggle("on",s>=0&&s===k);e.classList.toggle("done",s>=0&&s<k)});
 [].forEach.call($("#ac").children,function(el,i){el.classList.toggle("lit",m||i<k||k>=3)});
 [].forEach.call($("#am").children,function(el,i){el.classList.toggle("lit",m&&(i<k||k>=4))})}
 function setLoop(n){lstep=n;setActive();var m=n>=4;lo.classList.toggle("m",m);rg.classList.toggle("m",m);paint(n);morph(m?1:0)}
 layout(0);
+NODES.forEach(function(nd,i){var e=document.getElementById("n"+i);e.style.cursor="pointer";e.addEventListener("click",function(ev){ev.stopPropagation();if(busy)return;var st=lstep>=4?(nd.ms>=0?4+nd.ms:-1):nd.cs;if(st<0||st===lstep)return;busy=true;setLoop(st);setTimeout(function(){busy=false},360)})});
 function lstepBy(d){if(busy)return;var n=lstep+d;if(n<0){closeLoops();return}if(n>LMAX){openStory(0);return}busy=true;setLoop(n);setTimeout(function(){busy=false},n===4||n===3&&d<0?820:360)}
-function smokeSwap(fn){if(rm){fn();return}busy=true;var a=smoke.animate([{transform:"translateY(100vh)"},{transform:"translateY(-70vh)",offset:.55,easing:"cubic-bezier(.4,0,.6,1)"},{transform:"translateY(-240vh)"}],{duration:1500,easing:"cubic-bezier(.45,.05,.4,1)"});setTimeout(fn,680);a.onfinish=function(){busy=false}}
+function smokeSwap(fn){if(rm){fn();return}busy=true;var a=smoke.animate([{transform:"translateY(100vh)"},{transform:"translateY(-70vh)",offset:.55,easing:"cubic-bezier(.4,0,.6,1)"},{transform:"translateY(-240vh)"}],{duration:1100,easing:"cubic-bezier(.45,.05,.4,1)"});setTimeout(fn,500);a.onfinish=function(){busy=false}}
 function openLoops(){if(busy||inLoops)return;smokeSwap(function(){inLoops=true;lo.classList.add("open");setLoop(0);setActive()})}
 function closeLoops(){if(busy||!inLoops)return;smokeSwap(function(){inLoops=false;lo.classList.remove("open");setActive();pg.focus({preventScroll:true})})}
 /* story: a soft blob travels along an S curve behind Research and World; Resource & Risk is a card flip; enemy film strip */
@@ -826,11 +935,12 @@ c.dataset.o=o})}
 var FILM=[{w:[60,13.3,13.3,13.3],l:62,t:34},{w:[12,54,17,17],l:68,t:28},{w:[18,18,52,12],l:18,t:20},{w:[14,14,14,58],l:18,t:26}];
 function sps(el,s){el.classList.toggle("on",s==="on");el.classList.toggle("past",s==="past")}
 var ENDING_VIDEO="";(function(){if(!ENDING_VIDEO)return;var v=document.createElement("video");v.src=ENDING_VIDEO;v.muted=v.loop=v.autoplay=v.playsInline=true;document.querySelector("#endv .endbg").prepend(v)})();
-var sU=$("#sU"),sA=$("#sA"),asets=[].slice.call(sA.querySelectorAll(".aset")),ASTAGE=["Wireframe","Colour","In game \u00b7 looping animation"],ART_MEDIA=[["","",""],["","",""],["","",""]];
+var sU=$("#sU"),sA=$("#sA"),asets=[].slice.call(sA.querySelectorAll(".aset")),ASTAGE=["Wireframe","Colour","In game \u00b7 looping animation"],ART_MEDIA=[["video/viness.mp4","video/vines-colored.mp4","video/vines.mp4"],["video/house-2.mp4","","video/house.mp4"],["video/tree-2.mp4","video/tree-coloured.mp4","video/tree.mp4"]];
 asets.forEach(function(el,k){["wire","tex","game"].forEach(function(c,j){var u=ART_MEDIA[k][j];if(!u)return;var host=el.querySelector(".al."+c),m;if(/\.(mp4|webm)$/i.test(u)){m=document.createElement("video");m.src=u;m.muted=m.loop=m.autoplay=m.playsInline=true}else{m=document.createElement("img");m.src=u;m.alt=""}host.appendChild(m)})});
+(function(){var host=asets[1]&&asets[1].querySelector(".al.tex");if(!host)return;var g=document.createElement("div");g.className="mgrid";for(var n=1;n<=12;n++){var c=document.createElement("i"),im=document.createElement("img");im.src="images/mod-"+n+".jpg";im.alt="";c.appendChild(im);g.appendChild(c)}host.appendChild(g)})();
 
 /* UI Design: same card deck as Resource & Risk, four cards; the intro copy stays put while each card's text rises in */
-var ucs=[].slice.call(document.querySelectorAll("#ustack .rcard")),ufront=0,UI_MEDIA=["","","",""],UI_COPY=[["Interaction","A dot or hand prompt indicates interactable objects."],["Tasks","A task page tracks objectives, with completed tasks struck through."],["Damage","A visual overlay communicates player damage."],["Death","A dedicated death screen communicates failure."]];
+var ucs=[].slice.call(document.querySelectorAll("#ustack .rcard")),ufront=0,UI_MEDIA=["video/hand-ui.mp4","video/tasks-ui.mp4","video/death-ui.mp4","video/death-black.mp4"],UI_COPY=[["Interaction","A dot or hand prompt indicates interactable objects."],["Tasks","A task page tracks objectives, with completed tasks struck through."],["Damage","A visual overlay communicates player damage."],["Death","A dedicated death screen communicates failure."]];
 ucs.forEach(function(c,k){var u=UI_MEDIA[k];if(!u)return;var box=c.querySelector(".rbox"),m;if(/\.(mp4|webm)$/i.test(u)){m=document.createElement("video");m.src=u;m.muted=m.loop=m.autoplay=m.playsInline=true}else{m=document.createElement("img");m.src=u;m.alt=""}box.appendChild(m);box.classList.add("has")});
 function setUFront(f,anim){var old=ufront,N=ucs.length;ufront=f;ucs.forEach(function(c,i){var o=(i-f+N)%N,po=(i-old+N)%N;
 if(anim&&!rm&&po!==o&&(po===0||o===0)){var leave=po===0,F="none",B=RST[2],kf;c.style.zIndex=6;
@@ -842,7 +952,7 @@ function artShow(n){var on=n>=13&&n<=22,a=n>=14?Math.floor((n-14)/3):0,st=n>=14?
 asets.forEach(function(el,k){el.classList.toggle("on",on&&k===a);el.classList.toggle("s1",on&&k===a&&st===1);el.classList.toggle("s2",on&&k===a&&st===2);if(k===a)el.querySelector(".ast").textContent=ASTAGE[st]})}
 
 /* beat chart: threats and flashbacks collapse into the dots of the pacing graph */
-var sB=$("#sB"),bbody=$("#bbody"),bch=$("#bchart"),bdots=$("#bdots"),bgraph=false,bready=false,BCAT=["Bottle Gourd","Explore","Citrus Tree","Explore","Crows","Explore","Water Lily","Confront"],BT=[25,10,60,40,55,80,100,0],BG=[10,15,15,30,45,90,95,100],BEAT_IMG=["","","",""],bdl=[];
+var sB=$("#sB"),bbody=$("#bbody"),bch=$("#bchart"),bdots=$("#bdots"),bgraph=false,bready=false,BCAT=["Bottle Gourd","Explore","Citrus Tree","Explore","Crows","Explore","Water Lily","Confront"],BT=[25,10,60,40,55,80,100,0],BG=[10,15,15,30,45,90,95,100],BEAT_IMG=["images/beat-vines.jpg","images/beat-tree.jpg","images/beat-crows.jpg","images/beat-lily.jpg"],bdl=[];
 [].forEach.call(sB.querySelectorAll(".bimg"),function(el,k){var u=BEAT_IMG[k];if(!u)return;var m;if(/\.(mp4|webm)$/i.test(u)){m=document.createElement("video");m.src=u;m.muted=m.loop=m.autoplay=m.playsInline=true}else{m=document.createElement("img");m.src=u;m.alt=""}el.appendChild(m)});
 function bGeom(){var W=bbody.clientWidth,H=bbody.clientHeight,sm=W<700,L=sm?30:44,R=sm?10:14,T=12,B=sm?84:70,x0=L,x1=W-R,y0=T,y1=H-B;return {W:W,H:H,sm:sm,x0:x0,x1:x1,y0:y0,y1:y1,px:function(i){return x0+(i+.5)*(x1-x0)/8},py:function(v){return y1-v/100*(y1-y0)}}}
 function bBuild(){var g=bGeom(),h='<svg width="'+g.W+'" height="'+g.H+'">',v,i;
@@ -946,5 +1056,23 @@ st.animate([{transform:"perspective(1400px) rotateY(90deg)",opacity:.2},{transfo
 }
 })();
 </script>
+<script>(function(){var pref=true,v=document.getElementById("pv"),sec=document.getElementById("sec-play"),h=document.getElementById("hv"),b=document.getElementById("hsnd"),s0=document.getElementById("s0"),gest=false,inPlay=false;
+function lbl(){if(b)b.textContent=pref?"Sound on":"Sound off"}
+function setPref(x){pref=x;if(h)h.muted=!pref;if(v)v.muted=!pref;lbl()}
+function play(el){if(!el)return;el.muted=!pref;var p=el.play();if(p&&p.catch)p.catch(function(){el.muted=true;el.play().catch(function(){})})}
+/* first gesture: browsers block sound before it, so unmute then (unless the user turned sound off) */
+function g(){if(gest)return;gest=true;["pointerdown","keydown","wheel","touchstart"].forEach(function(e){window.removeEventListener(e,g,true)});if(pref){if(h&&!s0.hidden)h.muted=false;if(v&&inPlay)v.muted=false}}
+["pointerdown","keydown","wheel","touchstart"].forEach(function(e){window.addEventListener(e,g,true)});
+if(h){h.muted=false;var hp=h.play();if(hp&&hp.catch)hp.catch(function(){h.muted=true;h.play().catch(function(){})})}
+if(b)b.addEventListener("click",function(e){e.stopPropagation();setPref(!pref);if(h&&!s0.hidden)h.play().catch(function(){})});
+/* the video's own mute button counts as the user's choice, too */
+if(v)v.addEventListener("volumechange",function(){if(inPlay&&gest&&v.muted===pref){pref=!v.muted;if(h)h.muted=!pref;lbl()}});
+/* opening trailer: only plays (and sounds) while its slide is showing */
+if(h&&s0)setInterval(function(){if(s0.hidden){if(!h.paused)h.pause()}else if(h.paused){play(h)}},250);
+/* gameplay: sound on arrival, pause where it stands on exit, resume from there */
+if(v&&sec){var pg=document.getElementById("page");setInterval(function(){var open=pg&&pg.classList.contains("open"),r=v.getBoundingClientRect(),vh=window.innerHeight,sr=sec.getBoundingClientRect(),vis=Math.max(0,Math.min(sr.bottom,vh)-Math.max(sr.top,0))/Math.max(1,Math.min(sr.height,vh)),a=open&&vis>=.85;if(a&&!inPlay){inPlay=true;play(v)}else if(!a&&inPlay){inPlay=false;v.pause()}else if(!a&&!v.paused){v.pause()}},200)}
+lbl()})();(function(){var nm=document.getElementById("name"),w=document.getElementById("wrap");if(!nm||!w)return;var t1,t2;function reset(){clearTimeout(t1);clearTimeout(t2);w.classList.remove("tg-on","tg-swap")}setInterval(function(){var on=nm.classList.contains("in");if(on&&!nm._tg){nm._tg=1;reset();w.classList.add("tg-on");t1=setTimeout(function(){w.classList.add("tg-swap")},520)}else if(!on&&nm._tg){nm._tg=0;reset()}},200)})()</script><script>(function(){var st=document.getElementById("story");setInterval(function(){var open=st&&st.classList.contains("open");[].forEach.call(document.querySelectorAll("#story video"),function(v){var scr=v.closest(".scr"),as=v.closest(".aset"),pn=v.closest(".pn"),rc=v.closest(".rcard"),ok=open&&(!scr||scr.classList.contains("on"))&&(!as||as.classList.contains("on"))&&(!pn||!pn.closest("#sF").classList.contains("tour")||pn.classList.contains("act"))&&(!rc||rc.dataset.o==="0");if(ok&&v.paused){var p=v.play();if(p&&p.catch)p.catch(function(){})}else if(!ok&&!v.paused)v.pause()})},300)})()</script><script>(function(){var v=document.getElementById("pv"),bar=document.querySelector("#sec-play .mbar");if(!v||!bar)return;var tabs=bar.querySelectorAll(".mt:not(.play)"),G=v.getAttribute("src"),T="video/trailer.mp4";function go(i){var src=i?T:G;if(v.getAttribute("src")!==src){v.setAttribute("src",src);v.load()}tabs.forEach(function(t,k){t.classList.toggle("on",k===i)});v.muted=false;var p=v.play();if(p&&p.catch)p.catch(function(){v.muted=true;v.play().catch(function(){})})}tabs.forEach(function(t,k){t.addEventListener("click",function(){go(k)})})})()</script><script>(function(){var els=[].slice.call(document.querySelectorAll("section,.sec,.scr,.hero,.slide,footer,#loops,#page2,#story"));
+function tick(){var h=innerHeight,w=innerWidth;els.forEach(function(e){var r=e.getBoundingClientRect(),cs=getComputedStyle(e),vis=r.bottom>0&&r.top<h&&r.right>0&&r.left<w&&r.width>0&&cs.visibility!=="hidden"&&cs.display!=="none"&&!(e.hidden)&&(parseFloat(cs.opacity)>0.02||e.classList.contains("on"));e.classList.toggle("offscr",!vis)})}
+setInterval(tick,300);tick()})();</script>
 </body>
 </html>
