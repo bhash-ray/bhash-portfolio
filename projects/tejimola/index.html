@@ -562,6 +562,8 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 @media (max-width:900px){.toc{display:none}.hmid{padding:0 var(--pad)}.body{width:auto;min-width:0;margin:0;padding:0 var(--pad)}.tbox{width:100%}}
 @media (max-width:700px){dl{grid-template-columns:repeat(2,auto)}.tri{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.fog i,.smoke i{animation:none}.mouse::after{animation:none}.i{transform:none;transition:none}.tags,.hook{opacity:1;transform:none;transition:none}}
+
+body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12vh,120px);z-index:35;pointer-events:none;background:linear-gradient(rgba(8,8,10,.78),rgba(8,8,10,.42) 55%,rgba(8,8,10,0));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(#000 45%,transparent);mask-image:linear-gradient(#000 45%,transparent)}
 </style>
 <style>.pn video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}.pn>span,.pn>b{position:relative;z-index:1;text-shadow:0 2px 12px rgba(0,0,0,.7)}.imgs i video,.imgs i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}.imgs i em{z-index:1;text-shadow:0 1px 8px rgba(0,0,0,.8);color:#d8d8d8}.rbox video,.rbox img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}.rbox{position:relative;overflow:hidden}.rbox.has b{position:relative;z-index:1;text-shadow:0 2px 12px rgba(0,0,0,.8)}</style><style>
 #sec-play{min-height:calc(100vh - 90px);display:flex;flex-direction:column;justify-content:center}
@@ -716,7 +718,7 @@ table.wt th{font-weight:500;width:auto;color:var(--fg)}
 <h3 class="rv">Narrative Structure</h3>
 <p class="rv">The story follows a fixed sequence of levels but reveals its past through fragmented memories. Each haunting surfaces another piece of the truth. Rather than receiving a chronological account, the player reconstructs the crime out of sequence while trying to survive.</p></section>
 <section class="sec wide" id="sec-play"><h2 class="rv">Play</h2>
-<div class="media rv"><div class="mbar"><span class="mt on">Gameplay</span><span class="mt">Trailer</span><span class="sp"></span><span class="mt play">&#9654; Play the game</span></div>
+<div class="media rv"><div class="mbar"><span class="mt on">Gameplay</span><span class="mt">Trailer</span></div>
 <div class="vid"><video id="pv" src="video/gameplay-level-1.mp4" controls playsinline loop preload="auto" style="width:100%;height:100%;object-fit:cover;border-radius:inherit"></video></div></div></section>
 
 </div></div>
@@ -786,7 +788,7 @@ var TOC=[["Overview","Title and the hook.",0,2,0],
 ["Concept","The idea and the specifications.","page","sec-specs",0],
 ["Project Specifications","Genre, engine, team and role.","page","sec-specs",1],
 ["Core Idea & Challenge","The idea behind the game.","page","sec-concept",1],
-["Play","Watch and play.","page","sec-play",0],
+["Play","Watch the gameplay.","page","sec-play",0],
 ["Gameplay","Core and meta loops.","loops",[0,8],0],
 ["Core Loop","Exploration to survival.","loops",[0,3],1],
 ["Meta Loop","How the core loop merges and grows.","loops",[4,8],1],
