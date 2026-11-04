@@ -71,7 +71,7 @@ body.pg .top .back{display:flex}
 .say{position:relative;height:165vh}
 .pin{position:sticky;top:0;height:100vh;height:100dvh;display:grid;place-items:center;padding:0 clamp(20px,8vw,140px)}
 .say small{position:absolute;top:calc(84px + env(safe-area-inset-top,0px));left:0;right:0;text-align:center;color:var(--mute);font-size:13px}
-.say p{margin:0;text-align:center;max-width:19em;font:300 clamp(28px,4.1vw,66px)/1.22 "Fraunces","Instrument Serif",Georgia,serif;font-optical-sizing:auto;letter-spacing:-.02em}
+.say p{margin:0;text-align:center;max-width:21em;text-wrap:balance;font:300 clamp(24px,3.4vw,54px)/1.24 "Fraunces","Instrument Serif",Georgia,serif;font-optical-sizing:auto;letter-spacing:-.02em}
 .t{display:inline;opacity:.14;transition:opacity .45s}
 .t.on{opacity:1}
 .t.em{font-style:normal;font-weight:300;color:#e8786f}
@@ -234,7 +234,7 @@ body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12v
   <section class="div" id="divider"><div><h2 class="rv">Selected works</h2><span id="dsub"></span></div></section>
 
   <section class="works" id="works">
-    <div class="wh"><span id="cnt">01 / 04</span><button class="roll" id="roll" aria-label="Roll for a random project"><span class="rd"><span class="dc" id="rdc"></span></span><span>Roll for random project</span></button></div>
+    <div class="wh"><span id="cnt">01 / 03</span><button class="roll" id="roll" aria-label="Roll for a random project"><span class="rd"><span class="dc" id="rdc"></span></span><span>Roll for random project</span></button></div>
     <div class="car" id="car"></div>
     <div class="dots" id="dots"></div>
     <div class="desc" id="desc"><h3 id="dn"></h3><p id="dd"></p><div class="tags" id="dt"></div><button class="open" id="dopen">Open project</button></div>
@@ -263,8 +263,8 @@ $("#rdc").appendChild(makeDie());
 var P=[
 {n:"Tejimola",d:"A survival horror game rooted in Assamese folklore, where you play the stepmother and the story turns on a confess-or-hide choice.",t:["PC game","Survival horror","Folklore"],y:2026,pl:"PC",tl:"Unity, Blender",v:"projects/tejimola/video/trailer.mp4",img:"projects/tejimola/images/cover.jpg",href:"projects/tejimola/",tc:"00:23",kind:"Trailer"},
 {n:"Tiffin Wiffin",d:"An applied game for Science Gallery Bengaluru that helps fussy kids try new food, built with a team and inspired by my fussy nephews.",t:["PC game","Applied game","Science Gallery"],y:2026,pl:"PC",tl:"Unity",v:"projects/tiffin-wiffin/assets/trailer-video.mp4",img:"projects/tiffin-wiffin/assets/cover.jpg",href:"projects/tiffin-wiffin/",tc:"00:18",kind:"Trailer"},
-{n:"The Umbrella Man",d:"A stop-motion game trailer about a man without a voice in a world full of mouths, handmade from paper, clay and cloth.",t:["Game trailer","Stop motion","Narrative"],y:2026,pl:"Trailer",tl:"Stop motion, Unity",v:"projects/umbrella-man/video/card.mp4",img:"projects/umbrella-man/images/card-title.jpg",href:"projects/umbrella-man/",tc:"01:48",kind:"Trailer"},
-{n:"Book of Fates",d:"A hyper-casual point-and-click game concept set inside a living book of fates, where a demi-god must free trapped souls and finally their own.",t:["Game concept","Visual design","Point and click"],y:2026,pl:"PC",tl:"Photoshop, Blender",v:"",img:"projects/book-of-fates/images/card.jpg",href:"projects/book-of-fates/",tc:"",kind:"Visual design"}];
+{n:"The Umbrella Man",d:"A stop-motion game trailer about a man without a voice in a world full of mouths, handmade from paper, clay and cloth.",t:["Game trailer","Stop motion","Narrative"],y:2026,pl:"Trailer",tl:"Stop motion, Unity",v:"projects/umbrella-man/video/card.mp4",img:"projects/umbrella-man/images/card-title.jpg",href:"projects/umbrella-man/",tc:"01:48",kind:"Trailer"}
+];
 var N=P.length;
 var S=[["Introduction","Where the game started and who it is for."],["Play","Watch the gameplay or play the web build."],["Design","How the idea became rules, art and tone."],["Gameplay","What players do, minute to minute."],["Outcome","Where it ended up and what I learned."]];
 var AB=[["About","Who I am and where I work."],["Experience","Study, work and college roles."],["Beyond design","What I do when I am not designing."]];var BX=[[0,0,100,100,0],[8,14,46,60,1],[52,6,40,34,2],[58,44,34,48,3],[20,60,30,30,4],[70,70,24,22,5]];
