@@ -915,6 +915,8 @@ html.lt .mt.play{background:var(--red)}
 #sec-endings .endbox .ed .ec{color:var(--mute)!important;font-size:12px}
 #sec-endings .endbox .ed em{font-style:italic;color:var(--red)!important}
 }
+
+body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12vh,120px);z-index:35;pointer-events:none;background:linear-gradient(rgba(8,8,10,.78),rgba(8,8,10,.42) 55%,rgba(8,8,10,0));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(#000 45%,transparent);mask-image:linear-gradient(#000 45%,transparent)}
 </style>
 <style>
 .lm{position:relative}.lm .lv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}.lm .lv.on{opacity:1}
@@ -981,9 +983,9 @@ a.mt{text-decoration:none;cursor:pointer}
 #sec-endings .clinks a:hover{text-decoration:underline;color:var(--red)!important}
 #sec-endings .cft p{font-size:clamp(16px,1.4vw,22px)!important;line-height:1.45!important;color:#e8e8e8!important}
 
-.hbg,#hbg{background:#eeea7f!important;filter:none!important;transform:none!important}
+.hbg,#hbg{background:url(assets/cover.jpg) center/cover no-repeat!important;filter:none!important;transform:none!important}
 .hbg::after{background:none!important}
-.endbg{background:#eeea7f!important;filter:none!important;transform:none!important}
+.endbg{background:url(assets/cover.jpg) center/cover no-repeat!important;filter:none!important;transform:none!important}
 .endbg::after{background:none!important}
 #sec-endings .cft p{color:#3b3a28!important}
 .fi{width:clamp(44px,7.4vh,76px)!important;border-radius:14px!important;margin-right:16px!important}
@@ -1064,7 +1066,7 @@ a.mt{text-decoration:none;cursor:pointer}
 <section class="sec" id="sec-endings"><div class="endv rv" id="endv"><div class="endbg"></div>
 <div class="endrow"><div class="endbox" tabindex="0"><div class="eimg"></div><b>Perfect</b><div class="ed"><span class="ec">More than 300 kcal, with less than half of the total calories coming from Cerelac.</span><span class="et">The toddler celebrates with a big YAY!</span><em>&ldquo;Calories and nutrition were met.&rdquo;</em></div></div><div class="endbox" tabindex="0"><div class="eimg"></div><b>Nutrition Missed</b><div class="ed"><span class="ec">More than 300 kcal, but half or more of the total calories come from Cerelac.</span><span class="et">The toddler becomes sick.</span><em>&ldquo;Energy was filled, but nutrition was missed. The baby fell sick.&rdquo;</em></div></div><div class="endbox" tabindex="0"><div class="eimg"></div><b>Time Out</b><div class="ed"><span class="ec">300 kcal or less when the timer ends.</span><span class="et">The toddler becomes sick.</span><em>&ldquo;Feeding time slipped away. Babies need to be fed on time.&rdquo;</em></div></div></div></div>
 <div class="ehead"><div class="ehi"><h2>Endings</h2><p>The meal is evaluated when the timer ends. Each ending has its <br>own visual feedback and a change in background music.</p></div></div>
-<a class="nxt" id="sec-next" href="../tejimola/index.html"><img src="assets/next-tejimola.jpg" alt="Tejimola"><span class="nl"><small>Next project</small><b>Tejimola</b></span></a>
+<a class="nxt" id="sec-next" href="../umbrella-man/index.html"><img src="assets/next-umbrella.jpg" alt="The Umbrella Man"><span class="nl"><small>Next project</small><b>The Umbrella Man</b></span></a>
 <footer class="cft" id="sec-contact"><div class="cl"><a class="cpill" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">Contact me</a><a class="cmail" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">bhaswati_g@nid.edu</a></div><div class="clinks"><a href="https://www.linkedin.com/in/gogoirayshxeian/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bhaswati-ray.itch.io/" target="_blank" rel="noopener">Itch.io</a></div><p>Open to studio roles, freelance and playful collaborations. Say hi.</p></footer></section>
 </div></div>
 <div class="story" id="story"><div class="blob" id="blob"></div>
