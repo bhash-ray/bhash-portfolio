@@ -1002,6 +1002,11 @@ a.mt{text-decoration:none;cursor:pointer}
 #s1 .fog{display:none}
 .ttl h1{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;margin:0}
 .ttl{justify-content:flex-start;padding-top:clamp(70px,13vh,130px)}
+
+/* no overlaps on the cover slide */
+body:has(#stage[data-s="1"]) .toc{opacity:0!important;pointer-events:none}
+.ttl .tags span{background:rgba(255,251,222,.94)!important;border-color:rgba(40,30,0,.35)!important;color:#1a1400!important}
+body:has(#stage[data-s="1"]) .cue{opacity:0!important;pointer-events:none}
 </style>
 </head>
 <body>
