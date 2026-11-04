@@ -916,6 +916,85 @@ html.lt .mt.play{background:var(--red)}
 #sec-endings .endbox .ed em{font-style:italic;color:var(--red)!important}
 }
 </style>
+<style>
+.lm{position:relative}.lm .lv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}.lm .lv.on{opacity:1}
+#hbg{background:url(assets/hook-bg.jpg) center/cover no-repeat!important;filter:blur(4px)!important;transform:scale(1.05)}
+.hbg::after{background:rgba(255,248,200,.38)!important}
+a.mt{text-decoration:none;cursor:pointer}
+#hsnd{position:absolute;right:clamp(16px,3vw,40px);bottom:clamp(18px,4vh,40px);z-index:6;padding:8px 16px;border-radius:40px;border:1px solid rgba(255,255,255,.55);background:rgba(0,0,0,.35);color:#fff;font:500 13px system-ui,sans-serif;cursor:pointer}
+</style><style>
+/* no white gradients */
+.topfade,.toc::before{display:none!important}
+#s0 .vig,#s0 .fog,#s2 .vig,#s2 .fog{display:none!important}
+/* hook: lines appear one after another */
+.hook{opacity:1!important;transform:none!important;transition:none!important}
+.hook span{opacity:0;transform:translateY(14px);transition:opacity .8s,transform .8s}
+.go .hook span:nth-child(1){opacity:1;transform:none;transition-delay:.35s}
+.go .hook span:nth-child(2){opacity:1;transform:none;transition-delay:1.35s}
+.insp{opacity:0!important;transition:opacity .8s 2.4s!important}.go .insp{opacity:1!important}
+#hbg{filter:blur(3px)!important;transform:scale(1.04)}
+.hbg::after{background:rgba(255,248,200,.18)!important}
+/* food icons + exhibition video */
+.fi{background:rgba(255,255,255,.35)!important}.fi img{object-fit:contain!important;padding:4px}
+#sX .xphoto video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* core loop bigger, crop keeps baby + bowl */
+.loops{--S:min(52vh,44vw,560px)!important}
+.lbig{width:calc(var(--S)*.8)!important;gap:0!important}.lbig .lcap{display:none!important}.nd{z-index:4!important}
+#sX .xphoto em{color:#fff;text-shadow:0 1px 8px #000,0 0 3px #000;z-index:2}
+.lm{clip-path:polygon(50% 0,88% 12%,100% 50%,88% 88%,50% 100%,12% 88%,0 50%,12% 12%)!important;aspect-ratio:1!important}
+.ld{top:calc(var(--S) + 70px)!important}
+/* headline > subheadline (accent) > body */
+.sec h3,.scr h3,.stxt h3,.ftxt h3,.lvm h3,.cbody h3,.ucopy h3,.dk .ucopy h3,.xl2 h3.xlab{font-size:clamp(18px,1.55vw,24px)!important;font-weight:500!important;color:var(--red)!important;letter-spacing:-.01em!important}
+.stxt p,.ftxt p,.cbody p,.lvm p,.sec>p,.tint,.ucopy p,.xl2>p,.chead p,.xc{font-size:clamp(15px,1.28vw,18.5px)!important;line-height:1.55!important}
+/* ending: blurred title bg, next-project card, clean footer */
+.endbg{background:url(assets/hook-bg.jpg) center/cover no-repeat!important;animation:none!important;filter:blur(9px);transform:scale(1.08)}
+.endbg em{display:none}
+.endbg::after{content:"";position:absolute;inset:0;background:rgba(250,244,200,.38)}
+#sec-endings{--fh:max(27vh,190px)}
+#sec-endings .cft{position:absolute!important;left:0;right:0;bottom:0;height:var(--fh)!important;min-height:0!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:9px!important;padding:0 var(--pad) !important;grid-template-columns:none!important}
+#sec-endings .cft .cl{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+#sec-endings a.cmail{display:block;color:inherit;text-decoration:none;font-size:clamp(24px,3vw,46px)!important;margin:0!important;letter-spacing:-.04em;line-height:1}
+#sec-endings a.cmail:hover{color:var(--red)}
+#sec-endings .clinks{display:flex!important;flex-direction:row!important;gap:22px!important;margin:0!important}
+#sec-endings .clinks a{font-size:clamp(15px,1.3vw,21px)!important;border:0!important}
+#sec-endings .clinks a:hover{color:var(--red)}
+#sec-endings .cft p{max-width:none!important;margin:0!important;font-size:13px!important}
+.nxt{position:absolute;right:var(--pad);bottom:calc(var(--fh)/2 - min(20vw,280px)*.28);z-index:5;display:block;width:min(20vw,280px);height:calc(min(20vw,280px)*.5625);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .35s}
+.nxt:hover{transform:translateY(-4px) scale(1.02)}
+.nxt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.nxt::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),rgba(0,0,0,0) 62%)}
+.nxt .nl{position:absolute;left:14px;bottom:10px;z-index:2;display:flex;flex-direction:column;gap:2px}
+.nxt small{font-size:11px;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.nxt b{font-size:clamp(17px,1.6vw,24px);font-weight:500;letter-spacing:-.02em}
+@media (max-width:900px){.nxt{position:relative;right:auto;bottom:auto;width:calc(100% - 2*var(--pad));margin:18px var(--pad)}#sec-endings .cft{position:relative!important;height:auto!important;padding:24px var(--pad)!important}}
+</style><style>
+@media (min-width:901px){
+.nxt{position:absolute!important;right:0!important;bottom:0!important;top:auto!important;height:var(--fh)!important;width:calc(var(--fh)*1.7778)!important;border-radius:0!important;box-shadow:none!important;z-index:6}
+.nxt:hover{transform:none!important}
+.nxt .nl{left:18px;bottom:16px}
+#sec-endings .cft{padding-right:calc(var(--fh)*1.7778 + var(--pad))!important}
+}
+#sec-endings a.cpill{background:var(--red)!important;border:0!important;color:#fff!important;font-weight:500;padding:10px 22px!important;font-size:clamp(15px,1.2vw,18px)!important}
+#sec-endings a.cpill:hover{filter:brightness(1.12)}
+#sec-endings .clinks{gap:20px!important;column-gap:20px!important}
+#sec-endings .clinks a{color:var(--red)!important;letter-spacing:0!important;word-spacing:0!important;margin:0!important;padding:0!important}
+#sec-endings .clinks a:hover{text-decoration:underline;color:var(--red)!important}
+#sec-endings .cft p{font-size:clamp(16px,1.4vw,22px)!important;line-height:1.45!important;color:#e8e8e8!important}
+
+.hbg,#hbg{background:#eeea7f!important;filter:none!important;transform:none!important}
+.hbg::after{background:none!important}
+.endbg{background:#eeea7f!important;filter:none!important;transform:none!important}
+.endbg::after{background:none!important}
+#sec-endings .cft p{color:#3b3a28!important}
+.fi{width:clamp(44px,7.4vh,76px)!important;border-radius:14px!important;margin-right:16px!important}
+#sT td,#sT th{font-size:clamp(14px,1.25vw,19px)}
+</style>
+<style>.go .hook span:nth-child(1),.go .hook span:nth-child(2){transition-delay:.3s!important}
+.insp{transition:opacity .8s .3s!important;color:#000!important;font-size:clamp(20px,1.9vw,30px)!important}
+.pimgs i em{color:#fff!important;text-shadow:0 1px 8px #000,0 0 3px #000;z-index:2}</style>
+<style>.ti{display:inline-flex;align-items:center;gap:6px;margin-right:14px;white-space:nowrap}.ti img{height:clamp(30px,5.2vh,50px);width:auto;display:block;background:none}</style>
+<style>.eimg{border:6px solid #fff!important;box-sizing:border-box;border-radius:18px!important;overflow:hidden}#sec-endings .ehead{transform:translateY(22px)}#sec-endings .endbox .ed{padding-right:6px}</style>
+<style>.lw svg,.ring svg{pointer-events:none}</style>
 </head>
 <body>
 <div class="topfade" id="topfade"></div>
@@ -927,7 +1006,7 @@ html.lt .mt.play{background:var(--red)}
 
 <main class="stage" id="stage">
 <section class="slide" id="s0" aria-label="Opening video">
-<video id="hv" muted loop playsinline autoplay preload="auto"></video>
+<video id="hv" muted loop playsinline preload="auto"></video><button id="hsnd" type="button" aria-label="Toggle sound">Sound on</button>
 <div class="fog"><i></i><i></i><i></i><i></i></div>
 <div class="vig"></div>
 </section>
@@ -972,8 +1051,8 @@ html.lt .mt.play{background:var(--red)}
 <h3 class="rv">The Design Approach</h3>
 <p class="rv">Rather than presenting nutritional information through charts or instructions, Tiffin Wiffin uses interactive gameplay to communicate the idea. The central design objective was to make players experience the difference between meeting a calorie target and making nutritious food choices.</p></section>
 <section class="sec wide" id="sec-play"><h2 class="rv">Play</h2>
-<div class="media rv"><div class="mbar"><span class="mt on">Gameplay</span><span class="mt">Trailer</span><span class="sp"></span><span class="mt play">&#9654; Play the game</span></div>
-<div class="vid">Gameplay video coming soon</div></div></section>
+<div class="media rv"><div class="mbar"><span class="mt on">Gameplay</span><span class="mt">Trailer</span><span class="sp"></span><a class="mt play" href="https://bhaswati-ray.itch.io/tiffin-wiffin" target="_blank" rel="noopener">&#9654; Play the game</a></div>
+<div class="vid"><video id="pv" src="assets/gameplay-video.mp4" controls playsinline loop preload="metadata" style="width:100%;height:100%;object-fit:cover;border-radius:inherit"></video></div></div></section>
 
 </div></div>
 <div class="loops" id="loops"><div class="lw">
@@ -985,20 +1064,20 @@ html.lt .mt.play{background:var(--red)}
 <section class="sec" id="sec-endings"><div class="endv rv" id="endv"><div class="endbg"></div>
 <div class="endrow"><div class="endbox" tabindex="0"><div class="eimg"></div><b>Perfect</b><div class="ed"><span class="ec">More than 300 kcal, with less than half of the total calories coming from Cerelac.</span><span class="et">The toddler celebrates with a big YAY!</span><em>&ldquo;Calories and nutrition were met.&rdquo;</em></div></div><div class="endbox" tabindex="0"><div class="eimg"></div><b>Nutrition Missed</b><div class="ed"><span class="ec">More than 300 kcal, but half or more of the total calories come from Cerelac.</span><span class="et">The toddler becomes sick.</span><em>&ldquo;Energy was filled, but nutrition was missed. The baby fell sick.&rdquo;</em></div></div><div class="endbox" tabindex="0"><div class="eimg"></div><b>Time Out</b><div class="ed"><span class="ec">300 kcal or less when the timer ends.</span><span class="et">The toddler becomes sick.</span><em>&ldquo;Feeding time slipped away. Babies need to be fed on time.&rdquo;</em></div></div></div></div>
 <div class="ehead"><div class="ehi"><h2>Endings</h2><p>The meal is evaluated when the timer ends. Each ending has its <br>own visual feedback and a change in background music.</p></div></div>
-<a class="nname" id="sec-next" href="../tejimola/index.html"><b>Tejimola</b><small>Next project</small></a>
-<footer class="cft" id="sec-contact"><div class="cl"><a class="cpill" href="../../index.html#contact">Contact me</a><div class="cmail">bhaswati_g@nid.edu</div></div><div class="clinks"><a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">Itch.io</a></div><p>Open to studio roles, freelance and playful collaborations. Say hi.</p></footer></section>
+<a class="nxt" id="sec-next" href="../tejimola/index.html"><img src="assets/next-tejimola.jpg" alt="Tejimola"><span class="nl"><small>Next project</small><b>Tejimola</b></span></a>
+<footer class="cft" id="sec-contact"><div class="cl"><a class="cpill" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">Contact me</a><a class="cmail" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">bhaswati_g@nid.edu</a></div><div class="clinks"><a href="https://www.linkedin.com/in/gogoirayshxeian/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bhaswati-ray.itch.io/" target="_blank" rel="noopener">Itch.io</a></div><p>Open to studio roles, freelance and playful collaborations. Say hi.</p></footer></section>
 </div></div>
 <div class="story" id="story"><div class="blob" id="blob"></div>
 <section class="scr" id="sT"><div class="tw">
 <h2>Food Data</h2>
 <p class="tint">Each food has a fixed number of bites, calories per bite, required cutlery and compatible coaxing techniques.</p>
 <div class="tbl"><table><thead><tr><th>Food</th><th class="n">Bites</th><th class="n">kcal / bite</th><th class="n">Bowl total</th><th>Cutlery</th><th>Tricks accepted</th></tr></thead><tbody>
-<tr><td class="fn"><span class="fi"></span>Rice + Peas</td><td class="n">7</td><td class="n">40</td><td class="n">280</td><td>Spoon</td><td>Aeroplane, Star, Colour</td></tr>
-<tr><td class="fn"><span class="fi"></span>Rice</td><td class="n">7</td><td class="n">40</td><td class="n">280</td><td>Spoon</td><td>Aeroplane, Star, Colour</td></tr>
-<tr><td class="fn"><span class="fi"></span>Cerelac</td><td class="n">7</td><td class="n">50</td><td class="n">350</td><td>Spoon</td><td>Aeroplane, Colour</td></tr>
-<tr><td class="fn"><span class="fi"></span>Banana</td><td class="n">4</td><td class="n">30</td><td class="n">120</td><td>Fork</td><td>Aeroplane</td></tr>
-<tr><td class="fn"><span class="fi"></span>Carrot</td><td class="n">4</td><td class="n">25</td><td class="n">100</td><td>Fork</td><td>Aeroplane</td></tr>
-<tr><td class="fn"><span class="fi"></span>Pumpkin</td><td class="n">3</td><td class="n">15</td><td class="n">45</td><td>Spoon</td><td>Aeroplane, Star</td></tr>
+<tr><td class="fn"><span class="fi"></span>Rice + Peas</td><td class="n">7</td><td class="n">40</td><td class="n">280</td><td><span class="ti"><img src="assets/ic2-spoon.png" alt="">Spoon</span></td><td><span class="ti"><img src="assets/ic2-plane.png" alt="">Aeroplane</span><span class="ti"><img src="assets/ic2-star.png" alt="">Star</span><span class="ti"><img src="assets/ic2-colour.png" alt="">Colour</span></td></tr>
+<tr><td class="fn"><span class="fi"></span>Rice</td><td class="n">7</td><td class="n">40</td><td class="n">280</td><td><span class="ti"><img src="assets/ic2-spoon.png" alt="">Spoon</span></td><td><span class="ti"><img src="assets/ic2-plane.png" alt="">Aeroplane</span><span class="ti"><img src="assets/ic2-star.png" alt="">Star</span><span class="ti"><img src="assets/ic2-colour.png" alt="">Colour</span></td></tr>
+<tr><td class="fn"><span class="fi"></span>Cerelac</td><td class="n">7</td><td class="n">50</td><td class="n">350</td><td><span class="ti"><img src="assets/ic2-spoon.png" alt="">Spoon</span></td><td><span class="ti"><img src="assets/ic2-plane.png" alt="">Aeroplane</span><span class="ti"><img src="assets/ic2-colour.png" alt="">Colour</span></td></tr>
+<tr><td class="fn"><span class="fi"></span>Banana</td><td class="n">4</td><td class="n">30</td><td class="n">120</td><td><span class="ti"><img src="assets/ic2-fork.png" alt="">Fork</span></td><td><span class="ti"><img src="assets/ic2-plane.png" alt="">Aeroplane</span></td></tr>
+<tr><td class="fn"><span class="fi"></span>Carrot</td><td class="n">4</td><td class="n">25</td><td class="n">100</td><td><span class="ti"><img src="assets/ic2-fork.png" alt="">Fork</span></td><td><span class="ti"><img src="assets/ic2-plane.png" alt="">Aeroplane</span></td></tr>
+<tr><td class="fn"><span class="fi"></span>Pumpkin</td><td class="n">3</td><td class="n">15</td><td class="n">45</td><td><span class="ti"><img src="assets/ic2-spoon.png" alt="">Spoon</span></td><td><span class="ti"><img src="assets/ic2-plane.png" alt="">Aeroplane</span><span class="ti"><img src="assets/ic2-star.png" alt="">Star</span></td></tr>
 </tbody></table></div>
 <div class="trow">
 <div class="tbx"><b>One base per bowl</b>Rice and Cerelac cannot share a bowl, so players choose between whole-food combinations and instant cereal.</div>
@@ -1010,7 +1089,7 @@ html.lt .mt.play{background:var(--red)}
 <div class="xl2"><h2 class="sm">Designing for the Exhibition</h2>
 <p>Designed for walk-up visitors of different ages at Science Gallery Bengaluru, with no prior knowledge of nutrition or gaming needed.</p>
 <div class="xrule"></div><h3 class="xlab">Visitor flow</h3><div class="flow"><span>Intro</span><em>&rarr;</em><span>Tutorial</span><em>&rarr;</em><span>Gameplay</span><em>&rarr;</em><span>Ending</span><em>&rarr;</em><span>Replay</span></div></div>
-<div class="xr2"><div class="xphoto" id="xphoto"><em>Bhaswati playing Tiffin Wiffin at Science Gallery Bengaluru</em></div><div class="xgrid4"><div class="xc"><b>Two-minute rounds</b>A short, fixed session keeps the queue moving while the timer adds gentle pressure.</div><div class="xc"><b>Mouse-only interactions</b>Simple tap, select and drag.</div><div class="xc"><b>Illustrated tutorial</b>Five steps introduce the mechanics before each session.</div><div class="xc"><b>Kiosk-friendly flow</b>Visitors can play independently.</div></div></div></div></section>
+<div class="xr2"><div class="xphoto" id="xphoto"><em>Me playing Tiffin Wiffin at Science Gallery Bengaluru</em></div><div class="xgrid4"><div class="xc"><b>Two-minute rounds</b>A short, fixed session keeps the queue moving while the timer adds gentle pressure.</div><div class="xc"><b>Mouse-only interactions</b>Simple tap, select and drag.</div><div class="xc"><b>Illustrated tutorial</b>Five steps introduce the mechanics before each session.</div><div class="xc"><b>Kiosk-friendly flow</b>Visitors can play independently.</div></div></div></div></section>
 <section class="scr car" id="sH"><div class="chead"><h2>How to Play</h2><p>Visitors should be able to walk up and play without anyone explaining the rules. A five-step illustrated tutorial plays before every round. Scroll, swipe or click through the steps.</p></div><div class="ctrack"><div class="cslide"><div class="cbox"><b>Fill the bowl</b></div></div><div class="cslide"><div class="cbox"><b>Pick the cutlery</b></div></div><div class="cslide"><div class="cbox"><b>Feed the baby</b></div></div><div class="cslide"><div class="cbox"><b>Coax</b></div></div><div class="cslide"><div class="cbox"><b>Beat the clock</b></div></div></div><div class="cbody"></div><div class="cnav"><button class="cprev" aria-label="Previous"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="cdots"></div><button class="cnext" aria-label="Next"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></section>
 <section class="scr car" id="sC"><div class="chead"><h2>Coaxing Tricks</h2><p>Refusal is a central part of the gameplay. Each bite has a 35% chance of being accepted immediately. Otherwise, the baby asks for one of three coaxing techniques, depending on the food.</p></div><div class="ctrack"><div class="cslide"><div class="cbox"><b>Aeroplane</b></div></div><div class="cslide"><div class="cbox"><b>Food Shaping</b></div></div><div class="cslide"><div class="cbox"><b>Colouring</b></div></div></div><div class="cbody"></div><div class="cnav"><button class="cprev" aria-label="Previous"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="cdots"></div><button class="cnext" aria-label="Next"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></section>
 <section class="scr dk" id="sU"><div class="sgrid"><div class="stxt"><h2>Future Scope</h2><p>The current prototype focuses on the toddler stage. The larger vision is an experience that grows with the child, from infancy to six years.</p><div class="ucopy" id="ucopy"><h3>Stage 1 &middot; Infant (0&ndash;12 months)</h3><p>Focus: introducing food. Guided caregiver decisions about textures, first foods and early feeding cues, rather than time-based feeding challenges.</p></div></div><div class="rstack" id="ustack"><div class="rcard" data-o="0"><div class="rbox"><b>Infant</b></div></div><div class="rcard" data-o="1"><div class="rbox"><b>Toddler</b></div></div><div class="rcard" data-o="2"><div class="rbox"><b>Preschool</b></div></div></div></div></section></div>
@@ -1023,9 +1102,9 @@ var $=function(s){return document.querySelector(s)};
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 
 /* put the opening video path here once you have it, e.g. "video/intro.mp4" */
-var HERO_VIDEO="";
+var HERO_VIDEO="assets/trailer-video.mp4";
 var hv=$("#hv");
-if(HERO_VIDEO){hv.src=HERO_VIDEO;var pr=hv.play();if(pr&&pr.catch)pr.catch(function(){})}else hv.remove();
+if(HERO_VIDEO){hv.src=HERO_VIDEO}else hv.remove();
 
 /* side contents bar: slide index each entry opens; null = section not built yet */
 var TOC=[["Overview","Title and the hook.",0,2,0],
@@ -1132,15 +1211,20 @@ var lo=$("#loops"),lstep=0,LMAX=3;
 function layout(){NODES.forEach(function(n,k){var e=document.getElementById("n"+k);e.style.left=n.x+"%";e.style.top=n.y+"%"});
 [].forEach.call($("#ac").children,function(el,i){var A=NODES[i],B=NODES[(i+1)%4],t0=.29,t1=.71;
 el.setAttribute("d","M"+(A.x+(B.x-A.x)*t0).toFixed(2)+" "+(A.y+(B.y-A.y)*t0).toFixed(2)+" L"+(A.x+(B.x-A.x)*t1).toFixed(2)+" "+(A.y+(B.y-A.y)*t1).toFixed(2))})}
-var LOOP_MEDIA=["assets/loop-1.webp","assets/loop-2.webp","assets/loop-3.webp","assets/loop-4.webp"];
+var LOOP_MEDIA=["assets/core-1.mp4","assets/core-2.mp4","assets/core-3.mp4","assets/core-4.mp4"];
+var LV={};function loopShow(u){var h=document.getElementById("lm");if(!u){h.innerHTML="";LV={};return}var cur=h.querySelector(".lv.on");if(cur&&cur.getAttribute("src")===u)return;if(!LV[u]){var v;if(/\.(mp4|webm)$/i.test(u)){v=document.createElement("video");v.muted=v.loop=v.playsInline=true;v.preload="auto"}else{v=document.createElement("img");v.alt=""}v.src=u;v.className="lv";h.appendChild(v);LV[u]=v}var n=LV[u];if(n.tagName==="VIDEO"){try{n.currentTime=0}catch(e){}var pr=n.play();if(pr&&pr.catch)pr.catch(function(){})}n.classList.add("on");[].forEach.call(h.querySelectorAll(".lv.on"),function(o){if(o!==n){o.classList.remove("on");if(o.pause)setTimeout(function(){if(!o.classList.contains("on"))o.pause()},500)}})}
 function loopMedia(src){if(!src)return "";return /\.(mp4|webm)$/i.test(src)?'<video src="'+src+'" autoplay muted loop playsinline></video>':'<img src="'+src+'" alt="">'}
-function paint(n){var lb=document.getElementById("lbig");document.getElementById("lm").innerHTML=loopMedia(LOOP_MEDIA[n]);document.getElementById("lcap").textContent=NODES[n].c;
+function paint(n){var lb=document.getElementById("lbig");loopShow(LOOP_MEDIA[n]);document.getElementById("lcap").textContent=NODES[n].c;
 document.getElementById("ld").innerHTML='<span class="n1">'+NODES[n].d+'</span><span class="n2">'+CORE_T+'</span>';
 lb.classList.remove("pop");void lb.offsetWidth;lb.classList.add("pop");
 NODES.forEach(function(nd,i){var e=document.getElementById("n"+i);e.classList.toggle("on",i===n);e.classList.toggle("done",i<n)});
 [].forEach.call($("#ac").children,function(el,i){el.classList.toggle("lit",i<n||n===3)})}
 function setLoop(n){lstep=n;setActive();paint(n)}
 layout();
+function lgo(i){if(busy||i===lstep)return;busy=true;setLoop(i);setTimeout(function(){busy=false},360)}
+NODES.forEach(function(n,k){var e=document.getElementById("n"+k);e.style.cursor="pointer";e.addEventListener("click",function(){lgo(k)})});
+(function(){var lb=document.getElementById("lbig");lb.style.cursor="pointer";lb.addEventListener("click",function(){lgo((lstep+1)%4)})})();
+
 function lstepBy(d){if(busy)return;var n=lstep+d;if(n<0){goBlock(bk-1,-1);return}if(n>LMAX){goBlock(bk+1,1);return}busy=true;setLoop(n);setTimeout(function(){busy=false},360)}
 function smokeSwap(fn){if(rm){fn();return}busy=true;var a=smoke.animate([{transform:"translateY(100vh)"},{transform:"translateY(-70vh)",offset:.55,easing:"cubic-bezier(.4,0,.6,1)"},{transform:"translateY(-240vh)"}],{duration:1500,easing:"cubic-bezier(.45,.05,.4,1)"});setTimeout(fn,680);a.onfinish=function(){busy=false}}
 /* story: a soft blob travels along an S curve behind Research and World; Resource & Risk is a card flip; enemy film strip */
@@ -1150,7 +1234,7 @@ function segOf(st){for(var i=0;i<SEG.length;i++)if(st>=SEG[i][0]&&st<=SEG[i][1])
 var RST=["none","translate(-10px,-6px) rotate(-2.6deg)","translate(12px,-10px) rotate(2.2deg)"],EOUT="translate(75vw,-50px) rotate(18deg)";
 function put(host,u,cls){if(!u)return false;var m;if(/\.(mp4|webm)$/i.test(u)){m=document.createElement("video");m.src=u;m.muted=m.loop=m.autoplay=m.playsInline=true}else{m=document.createElement("img");m.src=u;m.alt=""}host.appendChild(m);if(cls)host.classList.add(cls);return true}
 /* media hooks: put file paths here once the files are in /assets */
-var ENDING_IMG=["assets/end-perfect.webp","assets/end-nutrition.webp","assets/end-timeout.webp"],FOOD_IMG=["","","","","",""],EXH_IMG="",PAGE_IMG=["","","","","",""];
+var ENDING_IMG=["assets/end-perfect.webp","assets/end-nutrition.webp","assets/end-timeout.webp"],FOOD_IMG=["assets/food-rice-peas.webp","assets/food-rice.webp","assets/food-cerelac.webp","assets/food-banana.webp","assets/food-carrot.webp","assets/food-pumpkin.webp"],EXH_IMG="assets/exhibition.mp4",PAGE_IMG=["assets/k-page-1.jpg","assets/k-page-2.jpg","assets/k-page-3.jpg","assets/page-4.jpg","assets/page-5.jpg","assets/page-6.jpg"];
 [].forEach.call(document.querySelectorAll("#sec-endings .eimg"),function(el,k){put(el,ENDING_IMG[k])});
 [].forEach.call(document.querySelectorAll("#sT .fi"),function(el,k){put(el,FOOD_IMG[k])});
 put(document.getElementById("xphoto"),EXH_IMG);
@@ -1178,7 +1262,7 @@ if(t<0||t>=N||t===f)return;busy=true;storyShow(base+t);setTimeout(function(){bus
 return {el:el,set:function(n){var ch=n!==f||!body.dataset.k;f=n;pos();if(ch){body.dataset.k=n;body.innerHTML="<h3>"+copy[n][0]+"</h3><p>"+copy[n][1]+"</p>";body.classList.remove("sw");void body.offsetWidth;body.classList.add("sw")}}}}
 var TUT_MEDIA=["assets/step-1.webp","assets/step-2.webp","assets/step-3.webp","assets/step-4.webp","assets/step-5.webp"],TUT_COPY=[["Step 1 · Fill the bowl","Tap a food item to place it in the bowl."],["Step 2 · Pick the cutlery","Select the appropriate cutlery."],["Step 3 · Feed the baby","Scoop and try to feed the baby."],["Step 4 · Coax","If the baby refuses, respond with a coaxing technique."],["Step 5 · Beat the clock","Get the baby to eat before time runs out."]];
 var TRICK_MEDIA=["assets/anim-aeroplane.webp","assets/anim-shaping.webp","assets/anim-colouring.webp"],TRICK_COPY=[["Aeroplane","Trace a dotted flight path to make the spoon fly towards the baby’s mouth. Straying from the path makes the interaction fail. Every food accepts this technique."],["Food Shaping","Use a star-shaped cutter to turn eligible foods such as pumpkin and rice into playful shapes, then offer them to the baby again."],["Colouring","Add beetroot juice to eligible foods such as rice or cereal to make them pink and colourful. Cerelac cannot be shaped, so it needs colouring or the aeroplane."]];
-var FUT_MEDIA=["","",""],FUT_COPY=[["Stage 1 · Infant (0–12 months)","Focus: introducing food. Guided caregiver decisions about textures, first foods and early feeding cues, rather than time-based feeding challenges."],["Stage 2 · Toddler (1–3 years)","Focus: encouraging eating habits. The current prototype covers food refusal, coaxing and dietary variety."],["Stage 3 · Preschool (3–6 years)","Focus: developing food independence. Children assemble their own meals and make simple nutritional choices, shifting from caregiver-led to child-led play."]];
+var FUT_MEDIA=["assets/k-fut-1.jpg","assets/k-fut-2.jpg","assets/k-fut-3.jpg"],FUT_COPY=[["Stage 1 · Infant (0–12 months)","Focus: introducing food. Guided caregiver decisions about textures, first foods and early feeding cues, rather than time-based feeding challenges."],["Stage 2 · Toddler (1–3 years)","Focus: encouraging eating habits. The current prototype covers food refusal, coaxing and dietary variety."],["Stage 3 · Preschool (3–6 years)","Focus: developing food independence. Children assemble their own meals and make simple nutritional choices, shifting from caregiver-led to child-led play."]];
 var CAR_H=mkCar("sH",2,TUT_MEDIA,TUT_COPY,80,.5),CAR_C=mkCar("sC",7,TRICK_MEDIA,TRICK_COPY,122,.8,true),DK_U=mkDeck("sU",FUT_MEDIA,FUT_COPY);
 function cl(n,a,b){return Math.max(a,Math.min(b,n))}
 function storyShow(n){var prev=sstep;sstep=n;
@@ -1261,5 +1345,16 @@ st.animate([{transform:"perspective(1400px) rotateY(90deg)",opacity:.2},{transfo
 }
 })();
 </script>
-</body>
+<script>(function(){var v=document.getElementById("pv"),t=document.querySelectorAll("#sec-play .mt");if(!v||t.length<2)return;var src=["assets/gameplay-video.mp4","assets/trailer-video.mp4"];[0,1].forEach(function(i){t[i].style.cursor="pointer";t[i].addEventListener("click",function(){t[0].classList.toggle("on",i===0);t[1].classList.toggle("on",i===1);v.src=src[i];v.play().catch(function(){})})})})()</script><script>(function(){var pref=true,v=document.getElementById("pv"),sec=document.getElementById("sec-play"),h=document.getElementById("hv"),b=document.getElementById("hsnd"),s0=document.getElementById("s0"),lo=document.getElementById("loops"),gest=false,inPlay=false;
+function lbl(){if(b)b.textContent=pref?"Sound on":"Sound off"}
+function setPref(x){pref=x;if(h)h.muted=!pref;if(v)v.muted=!pref;lbl()}
+function play(el){if(!el)return;el.muted=!pref;var p=el.play();if(p&&p.catch)p.catch(function(){el.muted=true;el.play().catch(function(){})})}
+function g(){if(gest)return;gest=true;["pointerdown","keydown","wheel","touchstart"].forEach(function(e){window.removeEventListener(e,g,true)});if(pref){if(h&&!s0.hidden)h.muted=false;if(v&&inPlay)v.muted=false}}
+["pointerdown","keydown","wheel","touchstart"].forEach(function(e){window.addEventListener(e,g,true)});
+if(b)b.addEventListener("click",function(e){e.stopPropagation();setPref(!pref);if(h&&!s0.hidden)play(h)});
+setPref(true);
+if(h&&s0)setInterval(function(){if(s0.hidden){if(!h.paused)h.pause()}else if(h.paused){play(h)}},250);
+if(v&&sec){var pg=document.getElementById("page");setInterval(function(){var open=pg&&pg.classList.contains("open"),vh=window.innerHeight,sr=sec.getBoundingClientRect(),vis=Math.max(0,Math.min(sr.bottom,vh)-Math.max(sr.top,0))/Math.max(1,Math.min(sr.height,vh)),a=open&&vis>=.7&&sr.height>0;if(a&&!inPlay){inPlay=true;play(v)}else if(!a&&inPlay){inPlay=false;v.pause()}else if(!a&&!v.paused){v.pause()}},200)}
+document.addEventListener("visibilitychange",function(){if(document.hidden){if(h)h.pause();if(v){v.pause();inPlay=false}}});
+setInterval(function(){var on=lo&&lo.classList.contains("open");[].forEach.call(document.querySelectorAll("#lm video.lv"),function(x){if(on&&x.classList.contains("on")){if(x.paused)x.play().catch(function(){})}else if(!x.paused)x.pause()})},300)})()</script><script>(function(){var st=document.getElementById("story");setInterval(function(){var open=st&&st.classList.contains("open");[].forEach.call(document.querySelectorAll("#story video"),function(v){var scr=v.closest(".scr"),ok=open&&(!scr||scr.classList.contains("on"));if(ok&&v.paused){var p=v.play();if(p&&p.catch)p.catch(function(){})}else if(!ok&&!v.paused)v.pause()})},300)})()</script></body>
 </html>
