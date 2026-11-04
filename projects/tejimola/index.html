@@ -751,11 +751,11 @@ body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12v
 <section class="scr" id="sL"><div class="lvc">
 <h2 class="lvh"><span class="lslot"><span class="lsw"><span>Level Design</span><span>Resource &amp; Risk Economy</span></span></span></h2>
 <p class="lvsub">Level 1 is complete and playable; Levels 2&ndash;4 are in production.</p>
-<div class="rr"><p class="rrint">Tejimola has no currency-based economy. Instead, the player manages vulnerability through health, tools, sanity and evidence.</p>
+<div class="rr"><p class="rrint">Tejimola has no currency-based economy. Instead, the player manages vulnerability through health, tools and evidence.</p>
 <div class="rstack" id="rstack">
 <div class="rcard" data-o="0"><div class="rbox has"><video src="video/death-ui.mp4" autoplay muted loop playsinline></video></div><b class="rlab">Health</b><p>Five vine hits cause failure. The player restarts from the last checkpoint; failure costs time, not accumulated progress.</p></div>
 <div class="rcard" data-o="1"><div class="rbox has"><video src="video/hand-ui.mp4" autoplay muted loop playsinline></video></div><b class="rlab">Tools</b><p>Weapons dropped in grass can be difficult to recover. A UI marker helps locate them, keeping tool loss consequential without making it unfair.</p></div>
-<div class="rcard" data-o="2"><div class="rbox"></div><b class="rlab">Sanity</b><p>Lying drains sanity, making dishonesty a cost to the player.</p></div></div>
+</div>
 </div></div></section>
 <section class="scr" id="sF"><div class="film" id="film">
 <div class="pn"><span>Level 1</span><b>Bottle Gourd</b><video src="video/vines.mp4" autoplay muted loop playsinline></video></div>
@@ -796,7 +796,7 @@ var TOC=[["Overview","Title and the hook.",0,2,0],
 ["Research","Folklore and the household.","story",[0,0],1],
 ["Space, Experience & World","Space, story and the protagonist.","story",[1,1],1],
 ["Level Design","Levels, systems and enemies.","story",[2,12],0],
-["Resource & Risk Economy","Health, tools and sanity.","story",[3,5],1],
+["Resource & Risk Economy","Health and tools.","story",[3,5],1],
 ["Enemy & Encounter Design","Four hauntings, four senses.","story",[6,10],1],
 ["Bottle Gourd","Level 1.","story",[7,7],2],
 ["Citrus Tree","Level 2.","story",[8,8],2],
@@ -928,7 +928,7 @@ if(rm||!bpos){bpos=last;blob.style.transform="translate("+last[0]+"vw,"+last[1]+
 var kf=[bpos].concat(pts).map(function(p){return {transform:"translate("+p[0]+"vw,"+p[1]+"vh)"}});
 blob.animate(kf,{duration:2000,easing:"cubic-bezier(.5,0,.3,1)"});blob.style.transform=kf[kf.length-1].transform;bpos=last}
 var RST=["none","translate(-10px,-6px) rotate(-2.6deg)","translate(12px,-10px) rotate(2.2deg)"],EOUT="translate(75vw,-50px) rotate(18deg)";
-function setRFront(f,anim){var old=rfront;rfront=f;rcs.forEach(function(c,i){var o=(i-f+3)%3,po=(i-old+3)%3;
+function setRFront(f,anim){var old=rfront;rfront=f;rcs.forEach(function(c,i){var NR=rcs.length,o=(i-f+NR)%NR,po=(i-old+NR)%NR;
 if(anim&&!rm&&po!==o&&(po===0||o===0)){var leave=po===0,F="none",B=RST[2],kf;c.style.zIndex=6;
 kf=leave?[{transform:F,opacity:1},{transform:EOUT,opacity:1,offset:.45},{transform:EOUT,opacity:0,offset:.46},{transform:B,opacity:0,offset:.62},{transform:B,opacity:1}]
 :[{transform:B,opacity:1},{transform:B,opacity:0,offset:.3},{transform:EOUT,opacity:0,offset:.31},{transform:EOUT,opacity:1,offset:.4},{transform:F,opacity:1}];
@@ -987,7 +987,7 @@ addEventListener("resize",function(){if(bready&&(sstep===11||sstep===12)){var gr
 function storyShow(n){var prev=sstep;sstepPrev=prev;sstep=n;
 sps(sR,n===0?"on":n>0?"past":"below");sps(sW,n===1?"on":n>1?"past":"below");
 sL.classList.toggle("on",n>=2&&n<=5);sL.classList.toggle("two",n>=3&&n<=5);sL.classList.toggle("up",n>=6);sF.classList.toggle("on",n>=5&&n<=10);
-var f=n>=5?2:n>=3?n-3:0;setRFront(f,n>=3&&n<=5&&prev>=3&&prev<=5&&Math.abs(prev-n)===1);
+var f=n>=4?1:0;setRFront(f,n>=3&&n<=5&&prev>=3&&prev<=5&&Math.abs(prev-n)===1);
 var i=n-7,tour=n>=7&&n<=10;sF.classList.toggle("tour",tour);
 pns.forEach(function(p,k){p.style.flexGrow=tour?FILM[i].w[k]:25;p.classList.toggle("act",tour&&k===i)});
 ens.forEach(function(e,k){e.classList.toggle("on",k===i)});
