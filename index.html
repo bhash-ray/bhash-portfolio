@@ -69,6 +69,7 @@ body.pg .top .back{display:flex}
 .vid .bx{animation:dr 7s ease-in-out infinite alternate}
 .vid .bx:nth-child(2){animation-delay:-1.4s}.vid .bx:nth-child(3){animation-delay:-2.8s}.vid .bx:nth-child(4){animation-delay:-4.2s}.vid .bx:nth-child(5){animation-delay:-5.6s}
 @keyframes dr{to{transform:translate(3%,2.5%) scale(1.07)}}
+.cimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .tilt video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .tc,.kind{position:absolute;top:12px;font-size:12px;z-index:2;padding:3px 9px;border-radius:20px;background:rgba(0,0,0,.45)}
 .tc{left:12px}.kind{right:12px}
@@ -234,10 +235,9 @@ $("#rdc").appendChild(makeDie());
 
 /* data — put a video path in v (e.g. "videos/salt-road.mp4") and it plays on the centre card */
 var P=[
-{n:"Hollow Lantern",d:"A quiet narrative game about carrying a light through a sleeping town.",t:["Narrative game","Exploration"],y:2026,pl:"PC",tl:"Unity",v:"",g:"",it:"https://example.com",tc:"00:42"},
-{n:"Salt Road",d:"A turn-based puzzle game about trading across a shrinking desert.",t:["Puzzle","Strategy"],y:2025,pl:"PC, Mobile",tl:"Godot",v:"",g:"",it:"https://example.com",tc:"01:05"},
-{n:"Quiet Hours",d:"A cozy sim where you run a night-time library and match each visitor with a book.",t:["Cozy sim","Narrative game"],y:2025,pl:"PC",tl:"Unity",v:"",g:"",it:"https://example.com",tc:"00:58"},
-{n:"Static Bloom",d:"A short horror game told entirely through a broken radio.",t:["Horror","Audio"],y:2024,pl:"PC",tl:"Godot",v:"",g:"",it:"https://example.com",tc:"00:36"}];
+{n:"Tejimola",d:"A survival horror game rooted in Assamese folklore, where you play the stepmother and the story turns on a confess-or-hide choice.",t:["PC game","Survival horror","Folklore"],y:2026,pl:"PC",tl:"Unity, Blender",v:"projects/tejimola/video/trailer.mp4",img:"projects/tiffin-wiffin/assets/next-tejimola.jpg",href:"projects/tejimola/",tc:"00:23",kind:"Trailer"},
+{n:"Tiffin Wiffin",d:"An applied game for Science Gallery Bengaluru that helps fussy kids try new food, built with a team and inspired by my fussy nephews.",t:["PC game","Applied game","Science Gallery"],y:2026,pl:"PC",tl:"Unity",v:"projects/tiffin-wiffin/assets/trailer-video.mp4",img:"projects/tejimola/images/next-tiffin3.jpg",href:"projects/tiffin-wiffin/",tc:"00:18",kind:"Trailer"},
+{n:"Kabootar Udd!",d:"A chaotic arcade game about defending your balcony from villainous pigeons with your hands, a cloth, a newspaper and a tawa. Project page coming soon.",t:["Mobile game","Arcade","Solo"],y:2026,pl:"Mobile, Web",tl:"Web",v:"",img:"",href:"",tc:"Soon",kind:"Coming soon"}];
 var N=P.length;
 var S=[["Introduction","Where the game started and who it is for."],["Play","Watch the gameplay or play the web build."],["Design","How the idea became rules, art and tone."],["Gameplay","What players do, minute to minute."],["Outcome","Where it ended up and what I learned."]];
 var AB=[["Hello","Who I am and how I got here."],["Craft","What I do in a game team."],["Experience","Where I have worked and studied."]];
@@ -275,13 +275,13 @@ $("#dsub").textContent=N+" projects · swipe, drag or press next";
 /* works carousel: swipe / drag / horizontal scroll moves it, vertical scroll moves the page */
 var car=$("#car"),dotsEl=$("#dots"),cards,Wc=0,pos=0,target=0,actI=-1,vis=0,dragged=false,mod=function(a){return((a%N)+N)%N};
 var ARW='<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',ARL='<svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>';
-car.innerHTML=P.map(function(p,i){return '<button class="card" data-i="'+i+'" aria-label="Open '+p.n+'"><div class="tilt vid"><div class="art">'+art(i)+'</div>'+(p.v?'<video src="'+p.v+'" muted loop playsinline preload="metadata"></video>':'')+'<span class="tc">▶ '+p.tc+'</span><span class="kind">Gameplay</span></div></button>'}).join("")+
+car.innerHTML=P.map(function(p,i){return '<button class="card" data-i="'+i+'" aria-label="Open '+p.n+'"><div class="tilt vid"><div class="art">'+(p.img?'<img class="cimg" src="'+p.img+'" alt="" draggable="false">':art(i))+'</div>'+(p.v?'<video src="'+p.v+'" poster="'+p.img+'" muted loop playsinline preload="metadata"></video>':'')+'<span class="tc">'+(p.href?'▶ ':'')+p.tc+'</span><span class="kind">'+p.kind+'</span></div></button>'}).join("")+
   '<button class="nav p" aria-label="Previous project">'+ARL+'</button><button class="nav n" aria-label="Next project">'+ARW+'</button>';
 dotsEl.innerHTML=P.map(function(p,i){return '<button data-g="'+i+'" aria-label="Show '+p.n+'"></button>'}).join("");
 cards=[].slice.call(car.querySelectorAll(".card"));
 function setActive(k){
   actI=k;var p=P[k];
-  $("#dn").textContent=p.n;$("#dd").textContent=p.d;
+  $("#dn").textContent=p.n;var ob=$("#dopen");ob.textContent=p.href?"Open project":"Coming soon";ob.disabled=!p.href;ob.style.opacity=p.href?"":".45";$("#dd").textContent=p.d;
   $("#dt").innerHTML=p.t.concat([p.y]).map(function(x){return '<span>'+x+'</span>'}).join("");
   $("#cnt").textContent="0"+(k+1)+" / 0"+N;
   [].forEach.call(dotsEl.children,function(b,j){b.classList.toggle("on",j===k)});
@@ -404,7 +404,11 @@ document.addEventListener("click",function(e){
 function openAbout(){var on=isOn();last=null;buildAbout();
   if(on){proj.animate([{opacity:0},{opacity:1}],{duration:rm?1:300});return}
   show();proj.animate([{opacity:0},{opacity:1}],{duration:rm?1:350,easing:"ease-out"})}
-function openP(i,card){last=card;build(i);
+function goTo(i){var p=P[i];if(!p.href)return;
+  var d=document.createElement("div");d.style.cssText="position:fixed;inset:0;background:#000;z-index:9999;opacity:0;transition:opacity .45s ease";document.body.appendChild(d);
+  requestAnimationFrame(function(){d.style.opacity=1});setTimeout(function(){location.href=p.href},rm?0:470)}
+addEventListener("pageshow",function(e){if(e.persisted)location.reload()});
+function openP(i,card){goTo(i);return;last=card;build(i);
   function done(){show();card.style.visibility=""}
   if(rm){done();return}
   var r=card.getBoundingClientRect(),fl=document.createElement("div");fl.className="fl";
@@ -421,8 +425,8 @@ function openP(i,card){last=card;build(i);
 var rolling=false,rollBtn=$("#roll");
 rollBtn.addEventListener("click",function(){
   if(rolling)return;rolling=true;
-  var pick=Math.floor(Math.random()*N);
-  function openRandom(){last=rollBtn;build(pick);show()}
+  var live=P.map(function(p,q){return p.href?q:-1}).filter(function(q){return q>=0}),pick=live[Math.floor(Math.random()*live.length)];
+  function openRandom(){goTo(pick)}
   if(rm){openRandom();rolling=false;return}
   var n=1+Math.floor(Math.random()*6),j=FACE.indexOf(n),vw=innerWidth,vh=innerHeight,Sz=Math.round(Math.min(vw,vh)*.17),
   br=$(".rd",rollBtn).getBoundingClientRect(),dx0=br.left+br.width/2-vw/2,dy0=br.top+br.height/2-vh/2,
