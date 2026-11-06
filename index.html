@@ -212,29 +212,43 @@ html.seen #ld{display:none}
 @media (prefers-reduced-motion:reduce){#ld{display:none}.i{transform:none;transition:none}.t{opacity:1}.vid .bx,.rd .die{animation:none}}
 
 body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12vh,120px);z-index:35;pointer-events:none;background:linear-gradient(rgba(8,8,10,.78),rgba(8,8,10,.42) 55%,rgba(8,8,10,0));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(#000 45%,transparent);mask-image:linear-gradient(#000 45%,transparent)}
+
+.tg{gap:8px;margin-top:2px}.tg li{font-size:clamp(12px,1.05vw,16px);padding:6px 15px}
+.say p{font:400 clamp(20px,2.6vw,40px)/1.3 "Inter Tight",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif!important;letter-spacing:-.025em}
+.t.em{font-weight:500}
+.car{--W:max(300px,min(72vw,1280px,calc((100vh - 300px) * 1.7778)))}
+.tilt{border-radius:30px;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.snip{position:absolute;inset:0;z-index:3;opacity:0;transition:opacity .35s;background:#000;pointer-events:none}.snip.on{opacity:1}
+.snip .sn{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s}.snip .sn.on{opacity:1}
+.snip .sb{display:none;position:absolute;left:24px;right:24px;bottom:18px;display:flex;gap:5px}.snip .sb i{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.3)}.snip .sb i.on{background:#fff}
+.desc{max-width:920px}
+.desc h3{font-size:clamp(34px,4vw,60px);margin-bottom:12px}
+.desc p{font-size:clamp(17px,1.4vw,21px);max-width:58ch;color:#c9c9c9;margin-bottom:18px}
+.tags{gap:8px;margin:0 auto 18px;max-width:58ch}.tags span{font-size:clamp(13px,1vw,15px);padding:4px 14px;border:1px solid var(--fg);background:none;color:var(--fg)}
+.open{font-size:16px}
 </style>
 </head>
 <body class="lock">
 <div id="ld" aria-hidden="true"><div class="dc"></div></div>
 
 <header class="top" id="top"><div class="tl"><button class="back" data-back aria-label="Back"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back</button><a href="#" class="logo" id="logo" data-logo>Bhash</a></div>
-  <nav><a href="#works" data-go="works">Work</a><button data-about>About</button><a href="#contact" data-go="contact">Contact</a></nav></header>
+  <nav><a href="#works" data-go="works">Work</a><a href="https://www.behance.net/gallery/127984773/HEINZ-KETCHUP-An-illustrative-Campaign" target="_blank" rel="noopener">Visual Design</a><button data-about>About</button><a href="#contact" data-go="contact">Contact</a></nav></header>
 <a class="resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
 
 <main id="home">
   <section class="banner" id="banner">
     <video class="reel" id="reel" src="assets/videos/showreel-a.mp4" poster="assets/videos/showreel-poster.jpg" autoplay muted playsinline preload="auto" aria-hidden="true"></video><video class="reel" id="reel2" src="assets/videos/showreel-b.mp4" muted playsinline preload="auto" aria-hidden="true" style="opacity:0"></video>
     <div class="shade"></div>
-    <div class="bt" id="bt"><h1 class="rv">Hi, I'm Bhaswati</h1><ul class="tg"><li>Tech Artist</li><li>Game Designer</li><li>Visual Designer</li></ul></div>
+    <div class="bt" id="bt"><h1 class="rv">Hi, I'm Bhaswati</h1><ul class="tg"><li>Developing Technical Artist</li><li>Game Designer</li><li>Visual Designer</li><li>3D &amp; 2D Generalist</li></ul></div>
     <span class="scr">Scroll ↓</span>
   </section>
 
-  <section class="say" id="say"><div class="pin"><small>About</small><p id="sp"></p></div></section>
+  <section class="say" id="say"><div class="pin"><p id="sp"></p></div></section>
 
-  <section class="div" id="divider"><div><h2 class="rv">Selected works</h2><span id="dsub"></span></div></section>
+  <section class="div" id="divider"><div><h2 class="rv">Selected works</h2></div></section>
 
   <section class="works" id="works">
-    <div class="wh"><span id="cnt">01 / 03</span><button class="roll" id="roll" aria-label="Roll for a random project"><span class="rd"><span class="dc" id="rdc"></span></span><span>Roll for random project</span></button></div>
+    <div class="wh"><span></span><button class="roll" id="roll" aria-label="Roll for a random project"><span class="rd"><span class="dc" id="rdc"></span></span><span>Roll for random project</span></button></div>
     <div class="car" id="car"></div>
     <div class="dots" id="dots"></div>
     <div class="desc" id="desc"><h3 id="dn"></h3><p id="dd"></p><div class="tags" id="dt"></div><button class="open" id="dopen">Open project</button></div>
@@ -261,9 +275,9 @@ $("#rdc").appendChild(makeDie());
 
 /* data — put a video path in v (e.g. "videos/salt-road.mp4") and it plays on the centre card */
 var P=[
-{n:"Tejimola",d:"A survival horror game rooted in Assamese folklore, where you play the stepmother and the story turns on a confess-or-hide choice.",t:["PC game","Survival horror","Folklore"],y:2026,pl:"PC",tl:"Unity, Blender",v:"projects/tejimola/video/trailer.mp4",img:"projects/tejimola/images/cover.jpg",href:"projects/tejimola/",tc:"00:23",kind:"Trailer"},
-{n:"Tiffin Wiffin",d:"An applied game for Science Gallery Bengaluru that helps fussy kids try new food, built with a team and inspired by my fussy nephews.",t:["PC game","Applied game","Science Gallery"],y:2026,pl:"PC",tl:"Unity",v:"projects/tiffin-wiffin/assets/trailer-video.mp4",img:"projects/tiffin-wiffin/assets/cover.jpg",href:"projects/tiffin-wiffin/",tc:"00:18",kind:"Trailer"},
-{n:"The Umbrella Man",d:"A stop-motion game trailer about a man without a voice in a world full of mouths, handmade from paper, clay and cloth.",t:["Game trailer","Stop motion","Narrative"],y:2026,pl:"Trailer",tl:"Stop motion, Unity",v:"projects/umbrella-man/video/card.mp4",img:"projects/umbrella-man/images/card-title.jpg",href:"projects/umbrella-man/",tc:"01:48",kind:"Trailer"}
+{n:"Tejimola",d:"A survival horror game rooted in Assamese folklore, where you play the stepmother and the story turns on a confess-or-hide choice.",t:["3D","Technical art","Level design","Narrative design","Art direction"],y:2026,pl:"PC",tl:"Unity, Blender",v:"projects/tejimola/video/trailer.mp4",img:"projects/tejimola/images/cover.jpg",href:"projects/tejimola/",tc:"00:23",kind:"Trailer"},
+{n:"Tiffin Wiffin",d:"An applied game for Science Gallery Bengaluru that helps fussy kids try new food, built with a team and inspired by my fussy nephews.",t:["Applied game","Game art","Science Gallery","Art direction"],y:2026,pl:"PC",tl:"Unity",v:"projects/tiffin-wiffin/assets/trailer-video.mp4",img:"projects/tiffin-wiffin/assets/cover.jpg",href:"projects/tiffin-wiffin/",tc:"00:18",kind:"Trailer"},
+{n:"The Umbrella Man",d:"A stop-motion game trailer about a man without a voice in a world full of mouths, handmade from paper, clay and cloth.",t:["Stop motion","Props & sets","Camera & lighting","Narrative","Art direction"],y:2026,pl:"Trailer",tl:"Stop motion, Unity",v:"projects/umbrella-man/video/card.mp4",img:"projects/umbrella-man/images/card-title.jpg",href:"projects/umbrella-man/",tc:"01:48",kind:"Trailer"}
 ];
 var N=P.length;
 var S=[["Introduction","Where the game started and who it is for."],["Play","Watch the gameplay or play the web build."],["Design","How the idea became rules, art and tone."],["Gameplay","What players do, minute to minute."],["Outcome","Where it ended up and what I learned."]];
@@ -285,13 +299,12 @@ $("#homeFt").innerHTML=ft(true);
 var bt=$("#bt"),banner=$("#banner");
 
 /* statement: words appear on scroll, key words in italics */
-var TXT="I'm a *game designer* and *multidisciplinary artist* working across game design, art direction, visual development, illustration, 3D and interactive storytelling. I love creating distinctive visuals, building worlds and making *ideas come alive*.";
+var TXT="I'm a *game designer* and *multidisciplinary artist*, working across game design, art direction, visual development, illustration, 3D, and interactive storytelling. I love creating distinctive visuals, building worlds, and making *ideas come alive*.";
 var sp=$("#sp"),words=[];
 TXT.split(/(\*[^*]+\*)/).forEach(function(seg){
   if(!seg)return;var em=seg.charAt(0)==="*";if(em)seg=seg.slice(1,-1);
   seg.split(" ").filter(Boolean).forEach(function(w){if(/^[.,;!?]/.test(w)&&words.length){sp.removeChild(sp.lastChild);words[words.length-1].textContent+=w;sp.appendChild(document.createTextNode(" "));return}var s=document.createElement("span");s.className="t"+(em?" em":"");s.textContent=w;sp.appendChild(s);sp.appendChild(document.createTextNode(" "));words.push(s)})});
 var sayEl=$("#say");
-$("#dsub").textContent=N+" projects · swipe, drag or press next";
 
 /* works carousel: swipe / drag / horizontal scroll moves it, vertical scroll moves the page */
 var car=$("#car"),dotsEl=$("#dots"),cards,Wc=0,pos=0,target=0,actI=-1,vis=0,dragged=false,mod=function(a){return((a%N)+N)%N};
@@ -301,10 +314,9 @@ car.innerHTML=P.map(function(p,i){return '<button class="card" data-i="'+i+'" ar
 dotsEl.innerHTML=P.map(function(p,i){return '<button data-g="'+i+'" aria-label="Show '+p.n+'"></button>'}).join("");
 cards=[].slice.call(car.querySelectorAll(".card"));
 function setActive(k){
-  actI=k;var p=P[k];
+  if(typeof snStop==="function")snStop();actI=k;var p=P[k];
   $("#dn").textContent=p.n;var ob=$("#dopen");ob.textContent=p.href?"Open project":"Coming soon";ob.disabled=!p.href;ob.style.opacity=p.href?"":".45";$("#dd").textContent=p.d;
-  $("#dt").innerHTML=p.t.concat([p.y]).map(function(x){return '<span>'+x+'</span>'}).join("");
-  $("#cnt").textContent="0"+(k+1)+" / 0"+N;
+  $("#dt").innerHTML=p.t.map(function(x){return '<span>'+x+'</span>'}).join("");
   [].forEach.call(dotsEl.children,function(b,j){b.classList.toggle("on",j===k)});
   cards.forEach(function(c,j){var v=$("video",c);if(v){if(j===k){var pr=v.play();if(pr&&pr.catch)pr.catch(function(){})}else v.pause()}});
   if(!rm)$("#desc").animate([{opacity:0,transform:"translateY(8px)"},{opacity:1,transform:"none"}],{duration:380,easing:"ease-out"})}
@@ -312,7 +324,7 @@ function layoutCards(){
   var spread=1+(1-vis)*.7;
   cards.forEach(function(c,i){
     var d=i-pos;d-=N*Math.round(d/N);var ad=Math.abs(d);
-    c.style.transform="translateX("+(d*Wc*.92*spread)+"px) translateZ("+(-Math.min(ad,2)*170)+"px) rotateY("+(-clamp(d,-1.2,1.2)*36)+"deg)";
+    var sc=ad<1?1.06-.24*ad:.82-.06*Math.min(ad-1,1);c.style.transform="translateX("+(d*Wc*.9*spread)+"px) translateZ("+(-Math.min(ad,2)*170)+"px) rotateY("+(-clamp(d,-1.2,1.2)*36)+"deg) scale("+sc.toFixed(3)+")";
     c.style.zIndex=Math.round(20-ad*4);
     var o=clamp((1.8-ad)/.5,0,1)*(.3+.7*vis);c.style.opacity=o;c.style.pointerEvents=o<.2?"none":"auto"});
   var k=mod(Math.round(pos));if(k!==actI)setActive(k)}
@@ -328,10 +340,23 @@ function endDrag(e){if(sx===null||(e&&e.pointerId!==sid))return;var dx=e?e.clien
   if(dragged){var s=Math.round(target);if(s===Math.round(st)&&Math.abs(dx)>40)s+=dx<0?1:-1;target=s;if(rm)tick();setTimeout(function(){dragged=false},60)}}
 addEventListener("pointerup",endDrag);addEventListener("pointercancel",endDrag);
 var wacc=0,wlock=false;
-car.addEventListener("wheel",function(e){if(Math.abs(e.deltaX)>Math.abs(e.deltaY)&&Math.abs(e.deltaX)>2){e.preventDefault();wacc+=e.deltaX;if(Math.abs(wacc)>50&&!wlock){step(wacc>0?1:-1);wacc=0;wlock=true;setTimeout(function(){wlock=false},420)}}},{passive:false});
+car.addEventListener("wheel",function(e){if(Math.abs(e.deltaX)>Math.abs(e.deltaY)*2.5&&Math.abs(e.deltaX)>6){e.preventDefault();wacc+=e.deltaX;if(Math.abs(wacc)>180&&!wlock){step(wacc>0?1:-1);wacc=0;wlock=true;setTimeout(function(){wlock=false;wacc=0},800)}}},{passive:false});
 car.addEventListener("click",function(e){
   var b=e.target.closest(".nav");if(b){step(b.classList.contains("n")?1:-1);return}
   if(dragged)return;var c=e.target.closest(".card");if(!c)return;var i=+c.dataset.i;if(i===actI)openP(i,c);else toIndex(i)});
+
+/* hover snippets: the centre card cycles through stills and clips from the project */
+var SN={"0":["projects/tejimola/video/loop-household.mp4","projects/tejimola/images/art-house-teji.jpg","projects/tejimola/video/explore.mp4","projects/tejimola/images/art-tree-coloured.jpg","projects/tejimola/video/loop-disturbance.mp4","projects/tejimola/images/beat-crows.jpg","projects/tejimola/video/house-teji.mp4","projects/tejimola/images/art-vines-colored.jpg","projects/tejimola/video/hand-ui.mp4","projects/tejimola/images/memories.jpg","projects/tejimola/video/death.mp4","projects/tejimola/images/res-courtyard.jpg"],
+"1":["projects/tiffin-wiffin/assets/core-1.mp4","projects/tiffin-wiffin/assets/k-page-1.jpg","projects/tiffin-wiffin/assets/core-2.mp4","projects/tiffin-wiffin/assets/anim-shaping.webp","projects/tiffin-wiffin/assets/core-3.mp4","projects/tiffin-wiffin/assets/page-4.jpg","projects/tiffin-wiffin/assets/core-4.mp4","projects/tiffin-wiffin/assets/anim-colouring.webp","projects/tiffin-wiffin/assets/k-fut-1.jpg","projects/tiffin-wiffin/assets/anim-aeroplane.webp","projects/tiffin-wiffin/assets/page-5.jpg","projects/tiffin-wiffin/assets/k-page-3.jpg"],
+"2":["projects/umbrella-man/images/still-street.webp","projects/umbrella-man/images/sb-man-close.webp","projects/umbrella-man/images/still-river.webp","projects/umbrella-man/images/bts-sets.webp","projects/umbrella-man/images/still-grave.webp","projects/umbrella-man/images/sb-river.webp","projects/umbrella-man/images/still-umb.webp","projects/umbrella-man/images/bts-shoot.webp","projects/umbrella-man/images/still-boat.webp","projects/umbrella-man/images/character.webp","projects/umbrella-man/images/still-bridge.webp","projects/umbrella-man/images/refs-buildings.webp"]};
+var snT=null,snI=0,snCard=null;
+function snStop(){clearInterval(snT);snT=null;if(snCard){var l=snCard.querySelector(".snip");if(l){l.classList.remove("on");[].forEach.call(l.querySelectorAll("video"),function(v){v.pause()})}snCard=null}}
+function snShow(l,k){var items=[].slice.call(l.querySelectorAll(".sn"));items.forEach(function(el,j){var on=j===k;el.classList.toggle("on",on);if(el.tagName==="VIDEO"){if(on){try{el.currentTime=0}catch(e){}var q=el.play();if(q&&q.catch)q.catch(function(){})}else el.pause()}});}
+function snStart(c){if(rm||snCard===c)return;snStop();var i=+c.dataset.i,list=SN[i];if(!list)return;var l=c.querySelector(".snip");
+  if(!l){l=document.createElement("div");l.className="snip";l.innerHTML=list.map(function(u){return /\.(mp4|webm)$/i.test(u)?'<video class="sn" src="'+u+'" muted loop playsinline preload="none"></video>':'<img class="sn" src="'+u+'" alt="" draggable="false" loading="lazy">'}).join("");c.querySelector(".tilt").appendChild(l)}
+  snCard=c;snI=0;l.classList.add("on");snShow(l,0);snT=setInterval(function(){snI=(snI+1)%list.length;snShow(l,snI)},1500)}
+car.addEventListener("pointerover",function(e){if(dragged||e.pointerType==="touch")return;var c=e.target.closest&&e.target.closest(".card");if(c&&+c.dataset.i===actI)snStart(c);else if(!c||+c.dataset.i!==actI)snStop()});
+car.addEventListener("pointerleave",snStop);
 dotsEl.addEventListener("click",function(e){var b=e.target.closest("button");if(b)toIndex(+b.dataset.g)});
 $("#dopen").addEventListener("click",function(){openP(actI,cards[actI])});
 addEventListener("keydown",function(e){if(proj.classList.contains("on"))return;var r=car.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;if(e.key==="ArrowRight")step(1);if(e.key==="ArrowLeft")step(-1)});
