@@ -701,14 +701,20 @@ body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12v
 <style>.pn img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .pn:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.62),rgba(0,0,0,0) 55%);pointer-events:none}.pn>span,.pn>b{position:relative;z-index:2;text-shadow:0 2px 12px rgba(0,0,0,.75)}
 .endbg{background-position:center 60%!important}.mt.play{text-decoration:none;display:inline-block}</style>
-<style>.lbig{width:calc(var(--S)*.78)!important}.lm{aspect-ratio:4/3!important;border-radius:22px!important;border:6px solid #1c1c1f!important;box-shadow:0 0 0 1px #3a3a3e,0 14px 40px rgba(0,0,0,.6),inset 0 0 36px rgba(0,0,0,.55)}
-.lbig::after{content:"";width:34%;height:7px;margin-top:2px;border-radius:0 0 8px 8px;background:#1c1c1f;box-shadow:0 0 0 1px #3a3a3e}
-.lm::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:3;background:repeating-linear-gradient(0deg,rgba(0,0,0,.10) 0 1px,transparent 1px 3px)}</style><style>.refc{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:12px;background:linear-gradient(150deg,#241713,#0c0a09);border-radius:inherit}.refc b{font-weight:500;font-size:clamp(11px,1vw,15px);line-height:1.2;color:#fafafa}.refc b:before{content:"";display:inline-block;width:6px;height:6px;margin-right:8px;border-radius:50%;background:var(--red)}</style><style>#sW .imgs.three{grid-template-columns:1fr;grid-auto-rows:min(22vh,210px);gap:12px}#sW .imgs.three i:nth-child(1){grid-row:auto}#sW .imgs.three i:nth-child(3){grid-column:auto}#sW .imgs.three i{aspect-ratio:auto}@media (max-width:900px){#sW .imgs.three{grid-auto-rows:min(18vh,130px)}}#sW .imgs i em{color:#fff;text-shadow:0 1px 8px #000,0 0 3px #000}</style><style>.ring rect.g{fill:none;stroke:#242424;stroke-width:.35}</style><style>img[src*="images/sb-"],img[src*="images/character"],img[src*="images/refs-"]{filter:brightness(.8) sepia(.16) contrast(1.04)}</style></head>
+<style>.lbig{width:calc(var(--S)*.78)!important}.lm{aspect-ratio:4/3!important;border-radius:14px!important;border:1px solid #2c2c2c!important;box-shadow:none!important}
+</style><style>.refc{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:12px;background:linear-gradient(150deg,#241713,#0c0a09);border-radius:inherit}.refc b{font-weight:500;font-size:clamp(11px,1vw,15px);line-height:1.2;color:#fafafa}.refc b:before{content:"";display:inline-block;width:6px;height:6px;margin-right:8px;border-radius:50%;background:var(--red)}</style><style>#sW .imgs.three{grid-template-columns:1fr;grid-auto-rows:min(22vh,210px);gap:12px}#sW .imgs.three i:nth-child(1){grid-row:auto}#sW .imgs.three i:nth-child(3){grid-column:auto}#sW .imgs.three i{aspect-ratio:auto}@media (max-width:900px){#sW .imgs.three{grid-auto-rows:min(18vh,130px)}}#sW .imgs i em{color:#fff;text-shadow:0 1px 8px #000,0 0 3px #000}</style><style>.ring rect.g{fill:none;stroke:#242424;stroke-width:.35}</style><style>img[src*="images/sb-"],img[src*="images/character"],img[src*="images/refs-"]{filter:brightness(.8) sepia(.16) contrast(1.04)}.sec h3,.scr h3,.stxt h3,.ftxt h3,.lvm h3,.cbody h3,.ucopy h3,#sU .ucopy h3,#sM .ucopy h3,.dk .ucopy h3,.dk .stxt h3{font-size:clamp(21px,1.85vw,29px)!important}
+.nxt{right:var(--pad)!important;bottom:calc(var(--fh)*.14)!important;height:calc(var(--fh)*.72)!important;width:calc(var(--fh)*.72*1.7778)!important;border-radius:22px!important;box-shadow:0 10px 30px rgba(0,0,0,.4)!important}
+.nxt::after{border-radius:22px}.nxt .nl{left:16px;bottom:12px}
+#sec-endings a.cpill{background:#fff!important;color:#0d0d0d!important}
+#sec-endings .clinks a,#sec-endings .clinks a:hover{color:#fff!important}
+#sec-endings .cft,#sec-endings .cft p,#sec-endings a.cmail,#sec-endings a.cmail:hover{color:#fff!important}
+#sec-endings .cft p{text-align:left!important}
+</style></head>
 <body>
 <div class="topfade" id="topfade"></div>
 <header class="top"><div class="tl"><a class="back" href="../../index.html" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Back</a><a class="logo" href="../../index.html">Bhash</a></div>
 <button class="mbtn" id="mbtn" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
-<nav id="mnav"><a class="mo" href="../../index.html">Home</a><a href="../../index.html#works">Work</a><a href="../../index.html#about">About</a><a href="../../index.html#contact">Contact</a></nav></header>
+<nav id="mnav"><a class="mo" href="../../index.html">Home</a><a href="../../index.html#works">Work</a><a href="https://www.behance.net/gallery/127984773/HEINZ-KETCHUP-An-illustrative-Campaign" target="_blank" rel="noopener">Visual Design</a><a href="../../index.html#about">About</a><a href="../../index.html#contact">Contact</a></nav></header>
 <a class="resume" href="../../resume.pdf" target="_blank" rel="noopener">Resume</a>
 <nav class="toc off" id="toc" aria-label="Contents"></nav>
 
@@ -749,7 +755,7 @@ body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12v
 <h3 class="rv">Narrative Structure</h3>
 <p class="rv">A man withdraws from the world after a personal loss. As he moves through different environments, the umbrella shields him from people, helps him evade obstacles, and lifts him across spaces he cannot cross on foot, including rivers. The journey leads him to a place where he can spend time with his wife. In the proposed full game, he would eventually find his voice and learn to let go of the umbrella.</p></section>
 <section class="sec wide" id="sec-play"><h2 class="rv">Trailer</h2>
-<div class="media rv"><div class="mbar"><span class="mt on">Stop-motion trailer</span><span class="sp"></span><a class="mt play" href="https://www.youtube.com/watch?v=XIdpNlEZ2z4" target="_blank" rel="noopener">&#9654; Watch on YouTube</a></div>
+<div class="media rv"><div class="mbar"><span class="mt on">Game trailer</span></div>
 <div class="vid"><video id="pv" src="video/trailer.mp4" poster="images/still-street.webp" controls playsinline loop preload="none" style="width:100%;height:100%;object-fit:cover;border-radius:inherit"></video></div></div></section>
 
 
@@ -764,7 +770,7 @@ body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12v
 <div class="endrow"><div class="endbox"><b>Carry the handmade look</b>Stylised 3D characters and miniature-inspired environments that keep the proportions, textures and lighting of the originals.</div><div class="endbox"><b>Play the umbrella</b>Traversal, evasion, flight and river crossings turn the umbrella&rsquo;s protective and movement roles into interaction.</div><div class="endbox"><b>Let go</b>The protagonist gradually learns to express himself again, and eventually to put the umbrella down.</div></div></div>
 <div class="ehead"><div class="ehi"><h2>Future Scope</h2><p>From stop motion to a stylised 3D narrative adventure game.</p></div></div>
 <a class="nxt" id="sec-next" href="../tejimola/index.html"><img src="images/next-tejimola.jpg" alt="Tejimola"><span class="nl"><small>Next project</small><b>Tejimola</b></span></a>
-<footer class="cft" id="sec-contact"><div class="cl"><a class="cpill" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">Contact me</a><a class="cmail" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">bhaswati_g@nid.edu</a></div><div class="clinks"><a href="https://www.linkedin.com/in/gogoirayshxeian/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bhaswati-ray.itch.io/" target="_blank" rel="noopener">Itch.io</a></div><p>Open to studio roles, freelance and playful collaborations. Say hi.</p></footer></section>
+<footer class="cft" id="sec-contact"><div class="cl"><a class="cpill" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">Contact me</a><a class="cmail" href="https://mail.google.com/mail/?view=cm&fs=1&to=bhaswati_g@nid.edu" target="_blank" rel="noopener">bhaswati_g@nid.edu</a></div><div class="clinks"><a href="https://www.linkedin.com/in/gogoirayshxeian/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bhaswati-ray.itch.io/" target="_blank" rel="noopener">Itch.io</a><a href="https://www.behance.net/shxinray" target="_blank" rel="noopener">Behance</a></div><p>Open to studio roles, freelance and playful collaborations. Say hi.</p></footer></section>
 </div></div>
 <div class="story" id="story"><div class="blob" id="blob"></div>
 <section class="scr" id="sR"><div class="sgrid">
@@ -774,21 +780,36 @@ body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12v
 <p><i>Coraline</i> informed the atmosphere, proportions and lighting. Tim Burton&rsquo;s films, especially <i>The Nightmare Before Christmas</i>, shaped the exaggerated silhouettes and darkly whimsical mood. A felt-based <i>Thumbelina</i> found on YouTube pushed experiments in how soft materials can stand in for water.</p>
 <h3>Learning by watching</h3>
 <p>There was no formal research study. The team watched short films and stop-motion works to understand lighting, camera angles, framing and composition, then tested materials by hand.</p></div></div></section>
-<section class="scr" id="sW"><div class="sgrid">
-<div class="stxt"><h2>Story &amp; World</h2>
-<h3>The story</h3>
-<p>A man withdraws from the world after a loss. People with oversized mouths offer opinions and consolation that never reach him. His umbrella shields him, carries him through the air and across rivers, and the journey ends where he can spend time with his wife.</p>
-<h3>The world</h3>
-<p>Three physical sets, a graveyard, a building and a riverside, built by hand. Their surreal, tactile quality lets the world mirror an inner landscape.</p></div>
+<section class="scr" id="sW">
+<div class="sbd"><div class="sbh"><h2>Story</h2><p>A man withdraws from the world after a loss. People with oversized mouths offer opinions and consolation that never reach him. His umbrella shields him, carries him through the air and across rivers, and the journey ends where he can spend time with his wife.</p></div>
+<div class="sbg">
+<figure style="--d:.25s"><div class="sf"><img src="images/sb-building.webp" alt=""><span class="n">01</span></div><figcaption><b>The street</b>He walks a street under his red umbrella while other figures pass by.</figcaption></figure>
+<figure style="--d:.35s"><div class="sf"><img src="images/sb-npc.webp" alt=""><span class="n">02</span></div><figcaption><b>The noise</b>A figure with an oversized grin waves at him. Everyone has something to say.</figcaption></figure>
+<figure style="--d:.45s"><div class="sf"><img src="images/sb-umbrella.webp" alt=""><span class="n">03</span></div><figcaption><b>The shield</b>Seen from above, the umbrella shuts him off from the world around him.</figcaption></figure>
+<figure style="--d:.55s"><div class="sf"><img src="images/sb-man-close.webp" alt=""><span class="n">04</span></div><figcaption><b>No mouth</b>A close-up from under the canopy: wide eyes and no mouth.</figcaption></figure>
+<figure style="--d:.65s"><div class="sf"><img src="images/sb-river.webp" alt=""><span class="n">05</span></div><figcaption><b>The river</b>The umbrella floats on the water and carries him, a bouquet within reach.</figcaption></figure>
+<figure style="--d:.75s"><div class="sf"><img src="images/sb-river2.webp" alt=""><span class="n">06</span></div><figcaption><b>Crossing</b>Close on his feet inside the umbrella as the water carries him across.</figcaption></figure>
+<figure style="--d:.85s"><div class="sf"><img src="images/sb-grave.webp" alt=""><span class="n">07</span></div><figcaption><b>The graveyard</b>He sits against a headstone, bouquet beside him, the umbrella over his shoulder.</figcaption></figure>
+<figure style="--d:.95s"><div class="sf"><img src="images/sb-grave2.webp" alt=""><span class="n">08</span></div><figcaption><b>The headstone</b>The umbrella fills the frame as he stands where the journey ends.</figcaption></figure>
+</div></div>
+<div class="sgrid">
+<div class="stxt"><h2>World</h2>
+<p>Three physical sets, built by hand. Their surreal, tactile quality lets the world mirror an inner landscape.</p>
+<h3>The building</h3>
+<p>A hand-built street of layered MDF fa&ccedil;ades, lit from within and crowded with flat, noisy NPCs.</p>
+<h3>The riverside</h3>
+<p>A soft, tactile river, animated frame by frame, that the umbrella lets him cross.</p>
+<h3>The graveyard</h3>
+<p>Where the journey ends, with his wife.</p></div>
 <div class="imgs three"><i style="--d:.35s"><img src="images/still-street.webp" alt=""><em>The building</em></i><i style="--d:.5s"><img src="images/still-river.webp" alt=""><em>The riverside</em></i><i style="--d:.65s"><img src="images/still-grave.webp" alt=""><em>The graveyard</em></i></div></div></section>
 <section class="scr" id="sL"><div class="lvc">
 <h2 class="lvh"><span class="lslot"><span class="lsw"><span>Visual Language</span><span>Core Visual Metaphors</span></span></span></h2>
 <p class="lvsub">Three images do the talking, so the film does not need dialogue.</p>
 <div class="rr"><p class="rrint">Each one turns an inner feeling into something you can see.</p>
 <div class="rstack" id="rstack">
-<div class="rcard" data-o="0"><div class="rbox has"><img src="images/sb-man-close.webp" alt=""></div><b class="rlab">The Missing Mouth</b><p>Emotional suppression. He cannot say what he feels, and his silence becomes part of who he is.</p></div>
-<div class="rcard" data-o="1"><div class="rbox has"><img src="images/sb-npc.webp" alt=""></div><b class="rlab">The Exaggerated Mouths</b><p>External noise. Oversized mouths stand for unsolicited opinions and well-meant but empty consolation.</p></div>
-<div class="rcard" data-o="2"><div class="rbox has"><img src="images/sb-umbrella.webp" alt=""></div><b class="rlab">The Umbrella</b><p>His emotional shield: withdrawal, avoidance and escape, and also how he travels and flies.</p></div></div>
+<div class="rcard" data-o="0"><div class="rbox has"><img src="images/mt-mouth.webp" alt=""></div><b class="rlab">The Missing Mouth</b><p>Emotional suppression. He cannot say what he feels, and his silence becomes part of who he is.</p></div>
+<div class="rcard" data-o="1"><div class="rbox has"><img src="images/mt-noise.webp" alt=""></div><b class="rlab">The Exaggerated Mouths</b><p>External noise. Oversized mouths stand for unsolicited opinions and well-meant but empty consolation.</p></div>
+<div class="rcard" data-o="2"><div class="rbox has"><img src="images/mt-umbrella.webp" alt=""></div><b class="rlab">The Umbrella</b><p>His emotional shield: withdrawal, avoidance and escape, and also how he travels and flies.</p></div></div>
 </div></div></section>
 <section class="scr" id="sF"><div class="film" id="film">
 <div class="pn"><span>3D &middot; Handcrafted</span><b>The Protagonist</b><img src="images/character.webp" alt=""></div>
@@ -814,7 +835,7 @@ body::after{content:"";position:fixed;left:0;right:0;top:0;height:clamp(84px,12v
 <script>
 (function(){
 var $=function(s){return document.querySelector(s)};
-var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;var wsub=0,wforce=null;
 
 /* put the opening video path here once you have it, e.g. "video/intro.mp4" */
 var HERO_VIDEO="video/trailer.mp4";
@@ -830,7 +851,8 @@ var TOC=[["Overview","Title and the hook.",0,2,0],
 ["Core Loop","Traverse, evade, fly, cross.","loops",[0,3],0],
 ["World Building","Research and the world.","story",[0,1],0],
 ["Research & Inspiration","References and learning.","story",[0,0],1],
-["Story & World","The story and the sets.","story",[1,1],1],
+["Story","The storyboard.","story",[1,1],1,0],
+["World","The three sets.","story",[1,1],1,1],
 ["Visual Language","Metaphors and characters.","story",[2,10],0],
 ["Core Visual Metaphors","Mouth, noise and umbrella.","story",[2,5],1],
 ["Character & Material Design","3D and 2D, by hand.","story",[6,10],1],
@@ -854,9 +876,9 @@ toc.addEventListener("click",function(e){var b=e.target.closest("button");if(!b|
 function reset(){inLoops=inStory=inPage2=false;lo.classList.remove("open");story.classList.remove("open");pg2.classList.remove("open")}
 function toPage1(){if(cur!==2)show(2);inPage=true;pg.classList.add("open");io(pg)}
 if(kind==="page"){var p2=pg2.contains(el);reset();
-if(p2){inPage2=true;pg2.classList.add("open");pg2.scrollTop=0;[].forEach.call(pg2.querySelectorAll(".in"),function(x){x.classList.remove("in")});io(pg2)}else{toPage1();[].forEach.call(pg.querySelectorAll(".in"),function(x){x.classList.remove("in")});var tp;if(t[3]==="sec-specs")tp=0;else if(t[3]==="sec-play"){var hh=el.querySelector("h2")||el;tp=hh.offsetTop+hh.offsetHeight/2-pg.clientHeight/2}else tp=el.offsetTop-20;pg.scrollTop=Math.max(0,tp);io(pg)}}
+if(p2){inPage2=true;pg2.classList.add("open");pg2.scrollTop=0;[].forEach.call(pg2.querySelectorAll(".in"),function(x){x.classList.remove("in")});io(pg2)}else{toPage1();[].forEach.call(pg.querySelectorAll(".in"),function(x){x.classList.remove("in")});var tp;if(t[3]==="sec-specs")tp=0;else if(t[3]==="sec-play"){var hh=el.querySelector("h2")||el;tp=pg.scrollTop+hh.getBoundingClientRect().top-pg.getBoundingClientRect().top+hh.offsetHeight/2-pg.clientHeight/2}else tp=el.offsetTop-20;pg.scrollTop=Math.max(0,tp);io(pg)}}
 else if(kind==="loops"){reset();toPage1();inLoops=true;lo.classList.add("open");setLoop(t[3][0])}
-else if(kind==="story"){var was=inStory;reset();inStory=true;story.classList.add("open");storyShow(t[3][0])}
+else if(kind==="story"){var was=inStory;reset();inStory=true;story.classList.add("open");wforce=(t[5]===undefined?null:t[5]);storyShow(t[3][0])}
 else{reset();inPage=false;pg.classList.remove("open");pg.scrollTop=0;show(t[2])}
 setActive()});
 var P1=["sec-specs","sec-concept","sec-play"],P2=["sec-endings"];
@@ -864,7 +886,7 @@ function setActive(){var tf=document.getElementById("topfade");if(tf)tf.classLis
 if(inPage2||(inPage&&!inLoops&&!inStory)){var y=c.scrollTop+c.clientHeight*.4;list.forEach(function(n){var el=document.getElementById(n);if(el&&el.offsetTop<=y)id=n});if(!id)id=list[0]}
 var bt=[].slice.call(toc.querySelectorAll("button")),st2=[];
 TOC.forEach(function(t,k){var on=false;
-if(t[2]==="page")on=t[3]===id||(t[3]==="sec-endings"&&(id==="sec-next"||id==="sec-contact"));else if(t[2]==="loops")on=inLoops&&lstep>=t[3][0]&&lstep<=t[3][1];else if(t[2]==="story")on=inStory&&sstep>=t[3][0]&&sstep<=t[3][1];else if(t[2]!==null&&!inPage&&!inPage2&&!inLoops&&!inStory)on=cur>=t[2]&&cur<=(t[3]||t[2]);
+if(t[2]==="page")on=t[3]===id||(t[3]==="sec-endings"&&(id==="sec-next"||id==="sec-contact"));else if(t[2]==="loops")on=inLoops&&lstep>=t[3][0]&&lstep<=t[3][1];else if(t[2]==="story")on=inStory&&sstep>=t[3][0]&&sstep<=t[3][1]&&(t[5]===undefined||t[5]===wsub);else if(t[2]!==null&&!inPage&&!inPage2&&!inLoops&&!inStory)on=cur>=t[2]&&cur<=(t[3]||t[2]);
 if(t[2]==="page"&&t[0]==="Concept")on=false;st2[k]=on});
 for(var k=TOC.length-1;k>=0;k--){var lv=TOC[k][4];for(var j=k+1;j<TOC.length&&TOC[j][4]>lv;j++)if(st2[j]){st2[k]=true}}
 function hasOn(k){for(var j=k+1;j<TOC.length&&TOC[j][4]>TOC[k][4];j++)if(st2[j])return true;return false}
@@ -926,14 +948,14 @@ var NODES=[{c:"Traverse",ca:-90,ma:-90,cs:0,ms:-1},{c:"Evade",ca:0,ma:0,cs:1,ms:
 CORE_T="Proposed core loop: traverse a space with the umbrella, evade the people and obstacles in the way, then fly or cross what cannot be walked, and arrive somewhere new.",
 META_T="";
 var CI=[0,1,2,3],MI=[0,1,2,3,0],lring=$("#lring");
-(function(){var h='<div class="ring" id="rg"><svg viewBox="0 0 100 100"><rect class="g" x="0" y="12" width="100" height="76" rx="9"/><g id="ac"></g><g id="am"></g></svg>';
+(function(){var h='<div class="ring" id="rg"><svg viewBox="0 0 100 100"><rect class="g" x="0" y="9.5" width="100" height="81" rx="9"/><g id="ac"></g><g id="am"></g></svg>';
 NODES.forEach(function(n,k){h+='<span class="nd '+(n.cls||"")+'" id="n'+k+'">'+(n.c?'<span class="a">'+n.c+'</span>':'')+(n.m?'<span class="b">'+n.m+'</span>':'')+'</span>'});
 h+='<div class="lbig" id="lbig"><div class="lm" id="lm"></div><p class="lcap" id="lcap"></p></div><div class="ctr"><span class="a">Core Loop</span></div></div><p class="ld a">'+CORE_T+'</p><p class="ld b">'+META_T+'</p>';
 lring.innerHTML=h;
 var p="";for(var k=0;k<4;k++)p+='<path class="arc"/>';$("#ac").innerHTML=p;p="";for(k=0;k<5;k++)p+='<path class="arc"/>';$("#am").innerHTML=p})();
 var lo=$("#loops"),lstep=0,LMAX=3,lt=0,raf=0,rg=$("#rg");
-function pt(a){var m={"-90":[50,12],"0":[100,50],"90":[50,88],"180":[0,50]},k=String(Math.round(a));if(m[k])return m[k];a=a*Math.PI/180;return [50+50*Math.cos(a),50+50*Math.sin(a)]}
-function rpath(i){var gh=12,gv=7,r=9,T=12,B=88,L=0,R=100;return [
+function pt(a){var m={"-90":[50,9.5],"0":[100,50],"90":[50,90.5],"180":[0,50]},k=String(Math.round(a));if(m[k])return m[k];a=a*Math.PI/180;return [50+50*Math.cos(a),50+50*Math.sin(a)]}
+function rpath(i){var gh=12,gv=7,r=9,T=9.5,B=90.5,L=0,R=100;return [
 "M"+(50+gh)+" "+T+" L"+(R-r)+" "+T+" Q"+R+" "+T+" "+R+" "+(T+r)+" L"+R+" "+(50-gv),
 "M"+R+" "+(50+gv)+" L"+R+" "+(B-r)+" Q"+R+" "+B+" "+(R-r)+" "+B+" L"+(50+gh)+" "+B,
 "M"+(50-gh)+" "+B+" L"+(L+r)+" "+B+" Q"+L+" "+B+" "+L+" "+(B-r)+" L"+L+" "+(50+gv),
@@ -1008,6 +1030,10 @@ else blob.style.opacity=0;
 artShow(n);sM.classList.toggle("on",n>=21&&n<=24);deckM(Math.max(0,Math.min(3,n-21)),n>=21&&n<=24&&prev>=21&&prev<=24&&Math.abs(prev-n)===1);sU.classList.toggle("on",n>=25);deckU(Math.max(0,Math.min(3,n-25)),n>=25&&prev>=25&&Math.abs(prev-n)===1);setActive()}
 function storyBy(d){if(busy)return;var n=sstep+d;if(n<0){closeStory();return}if(n>SMAX){openPage2();return}
 busy=true;storyShow(n);setTimeout(function(){busy=false},n<=1?2000:1100)}
+/* Story and World are two pages inside one story step */
+function wApply(){sW.classList.toggle("w2",wsub===1)}
+var _ss=storyShow;storyShow=function(n){var p=sstep;if(n===1){if(wforce!==null)wsub=wforce;else wsub=p>1?1:0}else if(n<1)wsub=0;wforce=null;_ss(n);wApply()};
+var _sb=storyBy;storyBy=function(d){if(busy)return;if(inStory&&sstep===1){if(d>0&&wsub===0||d<0&&wsub===1){busy=true;wsub=d>0?1:0;wApply();setActive();setTimeout(function(){busy=false},1100);return}}_sb(d)};
 function openStory(n){if(busy||inStory)return;smokeSwap(function(){inStory=true;inLoops=false;lo.classList.remove("open");story.classList.add("open");bpos=[95,6];blob.style.transform="translate(95vw,6vh)";storyShow(n)})}
 function closeStory(){if(busy||!inStory)return;smokeSwap(function(){inStory=false;story.classList.remove("open");inLoops=true;lo.classList.add("open");setLoop(LMAX);setActive()})}
 var pg2=$("#page2");pg2.addEventListener("scroll",function(){if(inPage2)setActive()},{passive:true});
@@ -1080,11 +1106,38 @@ if(b)b.addEventListener("click",function(e){e.stopPropagation();setPref(!pref);i
 /* the video's own mute button counts as the user's choice, too */
 if(v)v.addEventListener("volumechange",function(){if(inPlay&&gest&&v.muted===pref){pref=!v.muted;if(h)h.muted=!pref;lbl()}});
 /* opening trailer: only plays (and sounds) while its slide is showing */
-if(h&&s0)setInterval(function(){if(s0.hidden){if(!h.paused)h.pause()}else if(h.paused){play(h)}},250);
+if(h&&s0)setInterval(function(){if(s0.hidden||document.hidden){if(!h.paused)h.pause();h.muted=true}else if(h.paused){play(h)}},250);
 /* gameplay: sound on arrival, pause where it stands on exit, resume from there */
-if(v&&sec){var pg=document.getElementById("page");setInterval(function(){var open=pg&&pg.classList.contains("open"),r=v.getBoundingClientRect(),vh=window.innerHeight,sr=sec.getBoundingClientRect(),vis=Math.max(0,Math.min(sr.bottom,vh)-Math.max(sr.top,0))/Math.max(1,Math.min(sr.height,vh)),a=open&&vis>=.85;if(a&&!inPlay){inPlay=true;play(v)}else if(!a&&inPlay){inPlay=false;v.pause()}else if(!a&&!v.paused){v.pause()}},200)}
+if(v&&sec){var pg=document.getElementById("page");setInterval(function(){var open=pg&&pg.classList.contains("open"),r=v.getBoundingClientRect(),vh=window.innerHeight,sr=sec.getBoundingClientRect(),vis=Math.max(0,Math.min(sr.bottom,vh)-Math.max(sr.top,0))/Math.max(1,Math.min(sr.height,vh)),a=open&&vis>=.85&&!document.hidden&&!document.querySelector("#loops.open,#story.open,#page2.open");if(a&&!inPlay){inPlay=true;play(v)}else if(!a&&inPlay){inPlay=false;v.pause();v.muted=true}else if(!a&&!v.paused){v.pause();v.muted=true}},200)}
 lbl()})()</script><script>(function(){var st=document.getElementById("story");setInterval(function(){var open=st&&st.classList.contains("open");[].forEach.call(document.querySelectorAll("#story video"),function(v){var scr=v.closest(".scr"),as=v.closest(".aset"),pn=v.closest(".pn"),rc=v.closest(".rcard"),ok=open&&(!scr||scr.classList.contains("on"))&&(!as||as.classList.contains("on"))&&(!pn||!pn.closest("#sF").classList.contains("tour")||pn.classList.contains("act"))&&(!rc||rc.dataset.o==="0");if(ok&&v.paused){var p=v.play();if(p&&p.catch)p.catch(function(){})}else if(!ok&&!v.paused)v.pause()})},300)})()</script><script>(function(){var els=[].slice.call(document.querySelectorAll("section,.sec,.scr,.hero,.slide,footer,#loops,#page2,#story"));
 function tick(){var h=innerHeight,w=innerWidth;els.forEach(function(e){var r=e.getBoundingClientRect(),cs=getComputedStyle(e),vis=r.bottom>0&&r.top<h&&r.right>0&&r.left<w&&r.width>0&&cs.visibility!=="hidden"&&cs.display!=="none"&&!(e.hidden)&&(parseFloat(cs.opacity)>0.02||e.classList.contains("on"));e.classList.toggle("offscr",!vis)})}
 setInterval(tick,300);tick()})();</script>
+<style>.nxt{right:var(--pad)!important;bottom:calc(var(--fh)*.2)!important;height:calc(var(--fh)*.6)!important;width:calc(var(--fh)*.6*1.7778)!important;border-radius:22px!important}.nxt::after{border-radius:22px}.nxt .nl{left:14px;bottom:10px}.nxt b{font-size:clamp(15px,1.3vw,20px)}</style>
+<style>@media (min-width:901px){html body #sec-next.nxt{--cw:min(25vw,360px);width:var(--cw)!important;height:calc(var(--cw)/2)!important;aspect-ratio:2/1!important;padding:0!important;right:var(--pad)!important;bottom:calc((var(--fh) - var(--cw)/2)/2)!important;border-radius:22px!important}.nxt img{object-position:center 40%}}</style>
+<style>
+/* core loop: bigger, equal gap all round, plain rectangle */
+.loops{--S:min(52vh,44vw,540px)!important}
+@media (max-width:900px){.loops{--S:min(42vh,74vw,440px)!important}}
+.lbig{width:calc(var(--S)*.76)!important}
+.lm{aspect-ratio:4/3!important;border-radius:14px!important;border:1px solid #2c2c2c!important;box-shadow:none!important}
+.lm::after,.lbig::after{display:none!important;content:none!important}
+/* story: film storyboard */
+#sW .sbd{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,2.6vh,26px);padding:70px 6vw 28px 17.5vw;transition:opacity .7s,transform .7s}
+#sW .sbh h2{font-size:clamp(30px,3.8vw,58px);font-weight:400;line-height:1.08;margin:0 0 10px}
+#sW .sbh p{font-size:clamp(14px,1.15vw,17px)!important;line-height:1.5!important;max-width:95ch;margin:0;color:var(--fg)}
+#sW .sbg{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2.2vh,24px) clamp(12px,1.4vw,22px)}
+#sW .sbg figure{margin:0;opacity:0;transform:translateY(22px);transition:opacity .6s var(--d),transform .8s var(--d)}
+#sW.on:not(.w2) .sbg figure{opacity:1;transform:none}
+#sW .sf{position:relative;aspect-ratio:16/10;border:1px solid #2a2a2a;border-radius:6px;overflow:hidden;background:#101010}
+#sW .sf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#sW .sf .n{position:absolute;left:8px;top:7px;font-size:11px;letter-spacing:.14em;color:#050505;background:rgba(255,255,255,.9);padding:1px 6px;border-radius:3px}
+#sW .sbg figcaption{margin-top:8px;font-size:clamp(12px,.98vw,14.5px);line-height:1.4;color:#c8c8c8}
+#sW .sbg figcaption b{display:block;font-weight:500;color:var(--red);font-size:clamp(14px,1.15vw,17px);margin-bottom:2px}
+#sW .sgrid{transition:opacity .7s}
+#sW:not(.w2) .sgrid{opacity:0;pointer-events:none}
+#sW.w2 .sbd{opacity:0;pointer-events:none;transform:translateY(-30px)}
+@media (min-width:901px) and (max-width:1400px){#sW .sbd{padding-left:200px}}
+@media (max-width:900px){#sW .sbd{padding:74px var(--pad) 20px;overflow-y:auto;justify-content:flex-start}#sW .sbg{grid-template-columns:1fr 1fr}}
+</style>
 </body>
 </html>
