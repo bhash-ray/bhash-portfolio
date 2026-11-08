@@ -1406,5 +1406,22 @@ html body #sec-endings .endbox{align-self:flex-start!important;margin-top:0!impo
 .plink{margin-left:auto;display:inline-block;padding:10px 22px;border-radius:999px;background:#f26a1b;color:#fff;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}.plink:hover,.plink:focus-visible{transform:scale(1.04);box-shadow:0 0 0 3px rgba(242,106,27,.5);outline:none}
 @media (min-width:901px){html body #sT .tw{padding-left:200px!important;padding-right:36px!important}html body #sT .tbl,html body #sT .trow,html body #sT .tnote{width:min(1240px,100%)!important}html body #sT .tbl{overflow-x:visible!important}html body #sT td,html body #sT th{padding-left:12px!important;padding-right:12px!important;font-size:clamp(13px,1.05vw,17px)!important}html body #sT td{padding-top:clamp(2px,.5vh,6px)!important;padding-bottom:clamp(2px,.5vh,6px)!important}html body #sT .fi{width:clamp(34px,5.6vh,52px)!important;margin-right:12px!important}html body #sT .tw{padding-top:84px!important}}
 </style>
+<script>
+/* core loop: the camera follows the cutlery / hand, then settles on the baby in the centre */
+(function(){
+var K={
+"assets/core-1.mp4":[[0,.5,.45,1.3],[2,.52,.45,1.3],[2.6,.16,.4,1.45],[3.1,.44,.43,1.22],[3.5,.14,.4,1.45],[4.6,.14,.4,1.45],[5.3,.44,.43,1.22],[6,.44,.43,1.22]],
+"assets/core-4.mp4":[[0,.8,.47,1.4],[1,.6,.42,1.3],[2,.45,.42,1.2],[2.8,.45,.42,1.2],[3.6,.78,.5,1.4],[4.6,.65,.5,1.35],[5.4,.45,.43,1.2],[6,.45,.43,1.2]]};
+function ss(x){return x*x*(3-2*x)}
+function at(k,t){if(t<=k[0][0])return k[0];for(var i=1;i<k.length;i++){if(t<=k[i][0]){var a=k[i-1],b=k[i],u=ss((t-a[0])/(b[0]-a[0]));return[t,a[1]+(b[1]-a[1])*u,a[2]+(b[2]-a[2])*u,a[3]+(b[3]-a[3])*u]}}return k[k.length-1]}
+function tick(){var h=document.getElementById("lm");
+if(h){[].forEach.call(h.querySelectorAll("video.lv"),function(v){var k=K[v.getAttribute("src")];
+if(!k){if(v.style.transform)v.style.transform="";return}
+var S=v.clientWidth;if(!S)return;var c=at(k,v.currentTime||0),z=c[3],X=S/2-c[1]*z*S,Y=S/2-c[2]*z*S;
+X=Math.min(0,Math.max(S*(1-z),X));Y=Math.min(0,Math.max(S*(1-z),Y));
+v.style.transformOrigin="0 0";v.style.transform="translate("+X.toFixed(1)+"px,"+Y.toFixed(1)+"px) scale("+z.toFixed(3)+")"})}
+requestAnimationFrame(tick)}
+tick()})();
+</script>
 </body>
 </html>
