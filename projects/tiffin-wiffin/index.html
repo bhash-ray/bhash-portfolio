@@ -1409,9 +1409,7 @@ html body #sec-endings .endbox{align-self:flex-start!important;margin-top:0!impo
 <script>
 /* core loop: the camera follows the cutlery / hand, then settles on the baby in the centre */
 (function(){
-var K={
-"assets/core-1.mp4":[[0,.5,.45,1.3],[2,.52,.45,1.3],[2.6,.16,.4,1.45],[3.1,.44,.43,1.22],[3.5,.14,.4,1.45],[4.6,.14,.4,1.45],[5.3,.44,.43,1.22],[6,.44,.43,1.22]],
-"assets/core-4.mp4":[[0,.8,.47,1.4],[1,.6,.42,1.3],[2,.45,.42,1.2],[2.8,.45,.42,1.2],[3.6,.78,.5,1.4],[4.6,.65,.5,1.35],[5.4,.45,.43,1.2],[6,.45,.43,1.2]]};
+var K={};
 function ss(x){return x*x*(3-2*x)}
 function at(k,t){if(t<=k[0][0])return k[0];for(var i=1;i<k.length;i++){if(t<=k[i][0]){var a=k[i-1],b=k[i],u=ss((t-a[0])/(b[0]-a[0]));return[t,a[1]+(b[1]-a[1])*u,a[2]+(b[2]-a[2])*u,a[3]+(b[3]-a[3])*u]}}return k[k.length-1]}
 function tick(){var h=document.getElementById("lm");
