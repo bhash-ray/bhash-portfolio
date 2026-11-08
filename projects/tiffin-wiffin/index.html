@@ -1193,6 +1193,7 @@ if(i>0){nm.classList.remove("in");nm.classList.remove("tmo");slides.forEach(func
 requestAnimationFrame(function(){requestAnimationFrame(function(){if(i===1){nm.classList.add("in");morphTitle()}s.classList.add("go")})})}
 }
 function go(i){
+if(i===1)i=cur===0?2:0; /* cover page removed: skip it */
 if(busy||i===cur||i<0||i>=slides.length)return;
 if(rm){show(i);return}
 busy=true;
