@@ -1067,6 +1067,10 @@ body:has(#stage[data-s="1"]) .cue{opacity:0!important;pointer-events:none}
 <p class="rv">Rather than presenting nutritional information through charts or instructions, Tiffin Wiffin uses interactive gameplay to communicate the idea. The central design objective was to make players experience the difference between meeting a calorie target and making nutritious food choices.</p></section>
 
 
+<section class="sec wide" id="sec-play"><h2 class="rv">Play</h2>
+<div class="media rv"><div class="mbar"><span class="mt on">Gameplay</span><span class="mt">Trailer</span><span class="sp"></span><a class="plink" href="https://bhaswati-ray.itch.io/tiffin-wiffin" target="_blank" rel="noopener">Play the game</a></div>
+<div class="vid"><video id="pv" src="assets/gameplay-video.mp4" controls playsinline loop preload="metadata" style="width:100%;height:100%;object-fit:cover;border-radius:inherit"></video></div></div></section>
+
 </div></div>
 <div class="loops" id="loops"><div class="lw">
 <h2 class="lh">Core Loop</h2>
@@ -1126,7 +1130,7 @@ var TOC=[["Overview","Title and the hook.",0,2,0],
 ["Feeding Behaviour","How caregivers coax.","page","sec-research",1],
 ["Nutrition","Calories versus nutrition.","page","sec-nutrition",1],
 ["Concept","The idea and the challenge.","page","sec-concept",0],
-["Play the game","Opens on itch.io.","link","https://bhaswati-ray.itch.io/tiffin-wiffin",0],
+["Play","Watch and play.","page","sec-play",0],
 ["Food Data","Bites, calories and bowl rules.","story",[0,0],0],
 ["Designing for the Exhibition","Walk-up play.","story",[1,1],0],
 ["Core Loop","Four steps, two minutes.","loops",[0,3],0],
@@ -1145,10 +1149,9 @@ var ix=0;
 function nodes(lv){var h="";while(ix<TOC.length&&TOC[ix][4]===lv){var k=ix,t=TOC[ix];ix++;var kids=(ix<TOC.length&&TOC[ix][4]>lv)?nodes(lv+1):"";h+='<div class="g'+(kids?" has":"")+'" data-g="'+k+'"><button data-k="'+k+'" class="l'+lv+'">'+t[0]+""+"</button>"+(kids?'<div class="kids">'+kids+"</div>":"")+"</div>"}return h}
 toc.innerHTML=nodes(0);
 toc.addEventListener("click",function(e){var b=e.target.closest("button");if(!b||busy)return;var t=TOC[+b.dataset.k],kind=t[2];
-if(kind==="link"){window.open(t[3],"_blank","noopener");return}
-if(kind==="page"){applyBlock(t[3]==="sec-concept"?2:t[3]==="sec-endings"?6:1,1,{sec:t[3]})}
-else if(kind==="loops")applyBlock(4,1,{step:t[3][0]});
-else if(kind==="story")applyBlock(3+2*segOf(t[3][0]),1,{step:t[3][0]});
+if(kind==="page"){applyBlock(t[3]==="sec-concept"?2:t[3]==="sec-play"?3:t[3]==="sec-endings"?7:1,1,{sec:t[3]})}
+else if(kind==="loops")applyBlock(5,1,{step:t[3][0]});
+else if(kind==="story")applyBlock(4+2*segOf(t[3][0]),1,{step:t[3][0]});
 else applyBlock(0,1,{slide:0});
 setActive()});
 var P1=["sec-specs","sec-research","sec-nutrition"],P2=["sec-endings"],P1B=["sec-play"],P1C=["sec-concept"];
@@ -1291,21 +1294,21 @@ DK_U.set(cl(n-10,0,2),u&&prev>=10&&Math.abs(prev-n)===1);
 blob.style.opacity=0;
 setActive()}
 /* the page is a chain of blocks: hero, specs/research/concept page, play, food data + exhibition, loop, tutorial + tricks + future scope, endings */
-var BLOCKS=["hero","page","page","story","loops","story","page2"],bk=0;
+var BLOCKS=["hero","page","page","page","story","loops","story","page2"],bk=0;
 function goBlock(i,dir){if(busy||i<0||i>=BLOCKS.length)return;smokeSwap(function(){applyBlock(i,dir)})}
 function applyBlock(i,dir,o){o=o||{};bk=i;var ty=BLOCKS[i];
 inStory=ty==="story";inLoops=ty==="loops";inPage=ty==="page";inPage2=ty==="page2";
 story.classList.toggle("open",inStory);lo.classList.toggle("open",inLoops);pg.classList.toggle("open",inPage);pg2.classList.toggle("open",inPage2);
 if(ty==="hero"){show(o.slide!==undefined?o.slide:2);setActive();return}
 if(cur===0)show(2);document.documentElement.classList.remove("onv");
-if(inStory){var sg=(i-3)/2,st=o.step!==undefined?o.step:(dir<0?SEG[sg][1]:SEG[sg][0]);storyShow(st)}
+if(inStory){var sg=(i-4)/2,st=o.step!==undefined?o.step:(dir<0?SEG[sg][1]:SEG[sg][0]);storyShow(st)}
 else if(inLoops){setLoop(o.step!==undefined?o.step:(dir<0?LMAX:0))}
 else if(inPage){pg.dataset.m=i===1?"a":i===2?"c":"b";[].forEach.call(pg.querySelectorAll(".in"),function(x){x.classList.remove("in")});
 var tp=dir<0?1e6:0;if(o.sec){var el=document.getElementById(o.sec);if(o.sec==="sec-specs"||o.sec==="sec-concept")tp=0;else if(o.sec==="sec-play"){var hh=el.querySelector("h2")||el;tp=hh.offsetTop+hh.offsetHeight/2-pg.clientHeight/2}else tp=el.offsetTop-20}
 pg.scrollTop=Math.max(0,tp);io(pg);pg.focus({preventScroll:true})}
 else{pg2.scrollTop=0;[].forEach.call(pg2.querySelectorAll(".in"),function(x){x.classList.remove("in")});io(pg2);pg2.focus({preventScroll:true})}
 setActive()}
-function storyBy(d){if(busy)return;var n=sstep+d,sg=(bk-3)/2;if(n<SEG[sg][0]){goBlock(bk-1,-1);return}if(n>SEG[sg][1]){goBlock(bk+1,1);return}
+function storyBy(d){if(busy)return;var n=sstep+d,sg=(bk-4)/2;if(n<SEG[sg][0]){goBlock(bk-1,-1);return}if(n>SEG[sg][1]){goBlock(bk+1,1);return}
 busy=true;storyShow(n);setTimeout(function(){busy=false},900)}
 var pg2=$("#page2");pg2.addEventListener("scroll",function(){if(inPage2)setActive()},{passive:true});
 (function(){var mb=document.getElementById("mbtn");if(!mb)return;function cl(){document.body.classList.remove("mopen");mb.setAttribute("aria-expanded","false")}
@@ -1400,6 +1403,7 @@ html body #sec-endings .ehead{top:clamp(44px,5.5vh,66px)!important}
 html body #sec-endings .endrow{top:calc(clamp(44px,5.5vh,66px) + 166px)!important;align-items:flex-start!important}
 html body #sec-endings .endbox{align-self:flex-start!important;margin-top:0!important}
 }
+.plink{margin-left:auto;display:inline-block;padding:10px 22px;border-radius:999px;background:#f26a1b;color:#fff;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}.plink:hover,.plink:focus-visible{transform:scale(1.04);box-shadow:0 0 0 3px rgba(242,106,27,.5);outline:none}
 </style>
 </body>
 </html>
